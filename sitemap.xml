@@ -42,12 +42,6 @@
     </url>
         
     <url>
-     <loc>None/tutorials/var_detect_advanced/var_detect_advanced_background/</loc>
-     <lastmod>2015-11-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>None/tutorials/rna_seq_dge_basic/rna_seq_basic_background/</loc>
      <lastmod>2015-11-09</lastmod>
      <changefreq>daily</changefreq>
@@ -98,6 +92,12 @@
     <url>
      <loc>None/tutorials/variant_calling_galaxy_1/variant_calling_galaxy_1/</loc>
      <lastmod>2015-11-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
