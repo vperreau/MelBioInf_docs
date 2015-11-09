@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Galaxy Workflows - LSCC Documentation</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable_user.css" rel="stylesheet">
+        <link href="../../../includes/media/slides.css" rel="stylesheet">
+        <link href="../../../includes/media/tute.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">LSCC Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../ngs_overview/NGS_Overview/">NGS Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../using_git/Using_Git/">Using Git and Github for revision control</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Galaxy Workflows</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../var_detect_advanced/var_detect_advanced_background/">Variant Detection Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../hpc/">Introduction to HPC</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../unix/">Introduction to Unix</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../python_overview/python_overview/">Python Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="">Microbial de novo Assembly for Illumina Data</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
+                        </li>
+                    
+                        <li >
+                            <a href="">Identifying proteins from mass spectrometry data</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../../galaxy_101/galaxy_101/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../../var_detect_advanced/var_detect_advanced_background/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#galaxy-workflows">Galaxy Workflows</a></li>
+        
+            <li><a href="#background">Background</a></li>
+        
+            <li><a href="#section-1-preparation">Section 1: Preparation.</a></li>
+        
+            <li><a href="#section-2-create-and-run-a-workflow">Section 2: Create and run a workflow.</a></li>
+        
+            <li><a href="#what-now">What now?</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<style>
+  .image-header-gvl {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    -webkit-column-gap: 140px;
+    -moz-column-gap: 140px;
+    column-gap: 140px;
+  }
+</style>
+
+<div class="image-header-gvl">
+    <a href=http://genome.edu.au><img src="../media/gvl_logo.jpg" alt="GVL logo" width="112"/></a>
+    <a href="http://galaxyproject.org"><img src="../media/GalaxyLogoHighRes.png" width="164" /></a>
+    <a href=http://vlsci.org.au><img src="../media/vlsci_logo.jpg" alt="VLSCI logo" width="164"/></a>
+</div>
+
+<h1 id="galaxy-workflows">Galaxy Workflows</h1>
+<p><img src="../media/D4D_5503X.jpg" width="70"/></p>
+<p>Written and maintained by <a href="mailto:simon.gladman@unimelb.edu.au">Simon Gladman</a> - VLSCI</p>
+<h2 id="background">Background</h2>
+<p>This workshop/tutorial will familiarise you with the Galaxy workflow engine. It will cover the following topics:</p>
+<ul>
+<li>Logging in to the server</li>
+<li>How to construct and use a workflow by various methods</li>
+<li>How to share a workflow</li>
+</ul>
+<hr />
+<h2 id="section-1-preparation">Section 1: Preparation.</h2>
+<p>The purpose of this section is to get you to log in to the server.. For this workshop, you can use a Galaxy server that you have created by following the steps outlined in: <a href="">Launch a GVL Galaxy Instance</a> or you can use the public <a href="http://galaxy-tut.genome.edu.au">Galaxy-tut</a></p>
+<p><strong>Go to Galaxy URL of your server in Firefox or Chrome (your choice, please don't use IE or Safari.)</strong></p>
+<ul>
+<li>If you have previously registered on this server just log in:<ul>
+<li>On the top menu select: <strong>User -&gt; Login</strong></li>
+<li>Enter your password</li>
+<li>Click the <strong>Submit</strong> button</li>
+</ul>
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>If you haven’t registered on this server, you’ll need to now.<ul>
+<li>On the top menu select: <strong>User -&gt; Register</strong></li>
+<li>Enter your email, choose a password, repeat it and add a (all lower case) one word name</li>
+<li>Click on the <strong>Submit</strong> button.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="section-2-create-and-run-a-workflow">Section 2: Create and run a workflow.</h2>
+<p>This section will show you two different methods to create a workflow and then how to run one.</p>
+<h3 id="import-the-workflow-history">Import the workflow history</h3>
+<p>This step will show you how to import a history from a remote source into your own workspace. We will be using this history to build a workflow.</p>
+<ul>
+<li>From the histories menu <img src="../media/Galaxy-menu.png" width=20 />, click <strong>Import from File</strong>.</li>
+<li>Enter <em>https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/Workflow-finished-history.tar.gz</em> in the URL box.</li>
+<li>Click <strong>Submit</strong></li>
+</ul>
+<p>You might have to wait for a bit, then:</p>
+<ul>
+<li>From the history menu <img src="../media/Galaxy-menu.png" width=20 />, click <strong>Saved Histories</strong></li>
+<li>Select the history: <em>Imported: Workflow-finished</em></li>
+</ul>
+<h3 id="workflow-creation-method-1">Workflow creation: Method 1</h3>
+<p>We will create a workflow from an existing history. You can use this method to make a re-useable analysis from one you’ve already done. i.e. You can perform the analysis once and then create a workflow out of it to re-use it on more/new data. We will create a workflow from the history you imported in step 1 above. The footnote below explains the steps that created this history. These are the steps we will mimic in the workflow.</p>
+<p>Make sure your current history is the one you imported in Section 2 - Step 1 above (<em>imported: Workflow_finished.</em>) If not, switch to it.</p>
+<p><strong>Now we will create the workflow.</strong></p>
+<ul>
+<li>Click on the histories menu button <img src="../media/Galaxy-menu.png" width=20 /> at the top of the history pane.</li>
+<li>Click <strong>Extract Workflow</strong></li>
+</ul>
+<p>You will now be shown a page which contains the steps used to create the history you are extracting from. We use this page to say what to include in the workflow. We want everything here so we’ll just accept the defaults and:</p>
+<ul>
+<li>Change the Workflow name to something sensible like “Basic Variant Calling Workflow”</li>
+<li>Click <strong>Create Workflow</strong></li>
+</ul>
+<p>The workflow is now accessible via the bottom of the tool pane by clicking on All Workflows.</p>
+<h4 id="some-discussion">Some discussion:</h4>
+<p>Have a look at your workflow. Click on its button in the workflow list. It’s tool interface will appear. You can now run this workflow any time you like with different input datasets. NOTE: The input data sets must be of the same types as the original ones. i.e. Two fastq reads files and one fasta reference sequence.</p>
+<p>More interesting though is to:</p>
+<ul>
+<li>Click on the  <strong>Workflows</strong> link in the top menu</li>
+<li>Click on the down arrow on your workflow’s button.</li>
+<li>Click <strong>Edit</strong></li>
+</ul>
+<p>A visualisation of your workflow will appear. Note the connections and the steps.</p>
+<p>Next we’ll go through how to create this workflow using the editor..</p>
+<h3 id="workflow-creation-method-2">Workflow Creation: Method 2</h3>
+<p>We will now create the same read mapping/variant calling workflow using the editor directly. We need to get some reads and a reference, map the reads to the reference using BWA, run Freebayes on the BAM to call the variants, and finally filter the resulting vcf file.</p>
+<h4 id="step-1-create-a-workflow-name-and-edit-space">Step 1: Create a workflow name and edit space.</h4>
+<ul>
+<li>Click on <strong>Workflow</strong> in Galaxy’s menu.</li>
+<li>Click on the <strong>Create New Workflow</strong> button.</li>
+<li>In the "Workflow Name" text box type: <em>Variants from scratch</em></li>
+<li>Click the <strong>Create</strong> button.</li>
+</ul>
+<p>You’ll now see a list of workflows. Your’s will be in that list.</p>
+<h4 id="step-2-open-the-editor-and-place-component-tools">Step 2: Open the editor and place component tools</h4>
+<ul>
+<li>Click on the down arrow on your workflow’s button.</li>
+<li>Select <strong>Edit</strong></li>
+</ul>
+<p>You’ll be presented with a blank workflow grid.</p>
+<p><strong>Add three input datafiles.</strong></p>
+<ul>
+<li>In the Workflow control section of the tool pane, click on <strong>Inputs -&gt; Input dataset</strong> three times.</li>
+<li>Spread them out towards the left hand side of the workflow grid by clicking and dragging them around.</li>
+<li>For each one, change their name.<ul>
+<li>Click on each input box in turn</li>
+<li>In the right hand pane (where the history usually is), change the name to:<ul>
+<li>Reference data</li>
+<li>Reads 1</li>
+<li>Reads 2 - respectively.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Add in the BWA mapping step.</strong></p>
+<ul>
+<li>Click on <strong>NGS: Mapping -&gt; Map with BWA</strong> in the tool pane. BWA will be added to the workflow grid.</li>
+<li>In the right hand pane (where the history usually is), change the following parameters.<ul>
+<li>Change “Will you select a reference genome from your history or use a built-in index?:” to <em>Use a genome from history.</em></li>
+<li>Note that the BWA box on the grid changes to match these settings.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Connect the tools together.</strong></p>
+<ul>
+<li>Click and drag on the output of one of the input dataset tools to each of the input spots in the BWA tool. (Make connections.)<ul>
+<li>"Reference data" output to reference to "Use the following dataset as the reference sequence"</li>
+<li>"Reads 1" output to "Select first set of reads"</li>
+<li>"Reads 2" output to "Select second set of reads"</li>
+</ul>
+</li>
+</ul>
+<p><strong>Add in the Freebayes (Variant Calling step.)</strong></p>
+<ul>
+<li>Click on <strong>NGS: Variant Calling -&gt; Freebayes</strong></li>
+<li>In the right hand pane, change the following:<ul>
+<li>"Choose the source for the reference list:"  to <em>History</em></li>
+<li>Connect "Map with BWA" bam output to "Freebayes’" bam input.</li>
+<li>Connect the "Reference data" output to "Freebayes’" <em>Use the following dataset as the reference sequence</em> input.</li>
+</ul>
+</li>
+</ul>
+<p>If you’re keen - <strong>Note: this is optional.</strong> Also change the following parameters the right hand pane for freebayes to make it a bit more sensible for variant calling in bacterial genomes.</p>
+<ul>
+<li>"Choose parameter selection level": <em>Complete list of all options</em></li>
+<li>"Set population model": <em>Yes</em></li>
+<li>"Set ploidy for the analysis": <em>1</em></li>
+<li>"Set input filters": <em>Yes</em></li>
+<li>"Exclude alignments from analysis if they have a mapping quality less than": <em>20</em></li>
+<li>"Exclude alleles from analysis if their supporting base quality is less than": <em>20</em></li>
+<li>"Require at least this fraction of observations … to evaluate the position": <em>0.9</em></li>
+<li>"Require at least this count of observations .. to evaluate the position": <em>10</em></li>
+<li>"Set population and mappability priors": <em>Yes</em></li>
+<li>"Disable incorporation of prior expectations about observations": <em>Yes</em></li>
+</ul>
+<p><strong>Add in the Filter step.</strong></p>
+<ul>
+<li>Click on <strong>Filter and Sort - &gt; Filter</strong></li>
+<li>Connect "Freebayes’" output_vcf to the "filter" input.</li>
+<li>In the right hand pane, change the following:<ul>
+<li>"With the following condition": <em>c6 &gt; 500</em></li>
+<li>"Number of header lines to skip": <em>56</em></li>
+</ul>
+</li>
+</ul>
+<p>Phew! We’re nearly done! The only thing left is to select which workflow outputs we want to keep in our history. Next to each output for every tool is a star. Clicking on the stars will select those files as workflow outputs, everything else will be hidden in the history. In this case we only really want the BAM file and the final variants (vcf file.) Therefore:</p>
+<p><strong>Select workflow outputs.</strong></p>
+<ul>
+<li>Click on the star next to "Map with BWA’s" bam file output.</li>
+<li>Click on the star next to "Filter’s" output vcf.</li>
+</ul>
+<h4 id="step-3-save-it">Step 3: Save it!</h4>
+<p>Click on the <img src="../media/Galaxy-menu.png" width=20 /> at the top of the workflow grid and select <strong>Save</strong>.</p>
+<p>Congratulations. You’ve just created a Galaxy workflow.</p>
+<p>Now to run it!</p>
+<h3 id="running-the-workflow">Running the workflow</h3>
+<p>We will now make a new history called "Test" and run the workflow on it’s data.</p>
+<h4 id="create-the-new-history">Create the new history</h4>
+<ul>
+<li>From the Histories Menu, select <strong>Copy Datasets</strong></li>
+<li>Select the 2 x fastq files and the Ecoli .fna file.</li>
+<li>Under destination history, enter <em>Test</em> into "New History Named:"</li>
+<li>Click <strong>Copy History Items</strong> button</li>
+<li>Click on the link to the new history in the green bar at the top of the screen</li>
+</ul>
+<h4 id="run-the-workflow">Run the workflow</h4>
+<ul>
+<li>On the tools pane, click <strong>All Workflows</strong></li>
+<li>Select the <em>Variants from scratch</em> workflow (or whatever you called it.)</li>
+<li>Give it the correct files.</li>
+<li><em>Ecoli ... .fna</em> for Reference data</li>
+<li><em>bacterial_std_err_1.fastq</em> for Reads 1</li>
+<li><em>bacterial_std_err_2.fastq</em> for Reads 2</li>
+<li>Click <strong>Run Workflow</strong></li>
+</ul>
+<p>Your workflow will now run. It will send the right files to the right tools at the right time to the cluster (compute engine on your machine) and wait for them to finish. Watch as they turn yellow then green in turn.</p>
+<h2 id="what-now">What now?</h2>
+<p>Where to start? There’s so much you can do with Workflows. You can even run them on multiple file sets from the one setup.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../includes/media/delayed-jquery.js"></script>
+        <script src="../../../includes/media/mdx_showable.js"></script>
+    </body>
+</html>

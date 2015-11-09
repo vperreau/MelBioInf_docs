@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Galaxy Background - LSCC Documentation</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable_user.css" rel="stylesheet">
+        <link href="../../../includes/media/slides.css" rel="stylesheet">
+        <link href="../../../includes/media/tute.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">LSCC Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../ngs_overview/NGS_Overview/">NGS Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../using_git/Using_Git/">Using Git and Github for revision control</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../var_detect_advanced/var_detect_advanced_background/">Variant Detection Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../hpc/">Introduction to HPC</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../unix/">Introduction to Unix</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../python_overview/python_overview/">Python Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="">Microbial de novo Assembly for Illumina Data</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="">Identifying proteins from mass spectrometry data</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../proteomics_basic/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../background_data_formats/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#how-to-use-galaxy">How to use Galaxy</a></li>
+        
+            <li><a href="#create-a-new-history">Create a new History</a></li>
+        
+            <li><a href="#rename-a-history-item">Rename a history item</a></li>
+        
+            <li><a href="#find-someones-exact-username">Find someone's exact username</a></li>
+        
+            <li><a href="#share-a-history">Share a History</a></li>
+        
+            <li><a href="#import-a-history">Import a History</a></li>
+        
+            <li><a href="#copy-datasets">Copy Datasets</a></li>
+        
+            <li><a href="#multi-file-inputs">Multi File Inputs</a></li>
+        
+            <li><a href="#saved-histories">Saved Histories</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="how-to-use-galaxy">How to use Galaxy</h1>
+<p>This background wiki gives very brief guides on performing specific tasks in Galaxy.  For much more extensive documentation including many videos, online tutorials and discussion forums please <a href="https://wiki.galaxyproject.org/">consult the galaxy wiki</a>.</p>
+<h2 id="create-a-new-history">Create a new History</h2>
+<ol>
+<li>Click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy.</li>
+<li>Select <code>Create new</code></li>
+<li>The new history will be called "Unnamed History". Click its title to rename it.</li>
+</ol>
+<h2 id="rename-a-history-item">Rename a history item</h2>
+<ol>
+<li>Locate the item in your history and click its pencil icon</li>
+<li>Enter a new name in the <code>Name:</code> field and click <code>Save</code></li>
+</ol>
+<p><img alt="Image of renaming a history item" src="../EditHistoryItem.png" /></p>
+<h2 id="find-someones-exact-username">Find someone's exact username</h2>
+<p>Click the <code>User</code> menu at the top of Galaxy.  The menu that appears will show the currently logged in username</p>
+<p><img alt="Screenshot showing how to view logged in user" src="../ViewLoggedInUser.png" /></p>
+<h2 id="share-a-history">Share a History</h2>
+<ol>
+<li>Click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy.</li>
+<li>Select <code>Share or Publish</code>
+    <img alt="Screenshot showing share or publish item" src="../ShareOrPublish.png" /></li>
+<li>Then select <code>Share with another user</code> and enter the user's <a href="#find-someones-exact-username">full username</a></li>
+</ol>
+<h2 id="import-a-history">Import a History</h2>
+<ol>
+<li>Click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy.</li>
+<li>Select <code>Histories Shared with Me</code>
+    <img alt="Screenshot histories shared with me" src="../HistoriesSharedWithMe.png" /></li>
+<li>Select and view the desired history by clicking on its name
+    <img alt="Screenshot showing how to view a history" src="../ViewSharedHistory.png" /></li>
+</ol>
+<h2 id="copy-datasets">Copy Datasets</h2>
+<ol>
+<li>Click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy.</li>
+<li>Select <code>Histories Shared with Me</code>
+    <img alt="Screenshot copy datasets" src="../CopyDatasets1.png" /></li>
+<li>The screen that appears allows copying of specific datasets between any of your histories</li>
+</ol>
+<h2 id="multi-file-inputs">Multi File Inputs</h2>
+<p>Tools that support running over multiple input files indicate this by showing a multi-file icon beside the relevant input.
+After clicking the multi-file icon the display should change to allow multiple inputs to be selected.</p>
+<p><img alt="Screenshot for multi-file inputs" src="../MultiFileInputs.png" /></p>
+<h2 id="saved-histories">Saved Histories</h2>
+<p>To view a list of your saved histories click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy and select <code>Saved Histories</code>
+Once the list of your histories appears you can switch to a history by clicking it. You can also use this view to delete histories or organise them by tags</p>
+<p><img alt="Screenshot saved histories" src="../SavedHistories.png" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../includes/media/delayed-jquery.js"></script>
+        <script src="../../../includes/media/mdx_showable.js"></script>
+    </body>
+</html>

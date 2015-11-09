@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Tutorial - LSCC Documentation</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable_user.css" rel="stylesheet">
+        <link href="../../../includes/media/slides.css" rel="stylesheet">
+        <link href="../../../includes/media/tute.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">LSCC Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../ngs_overview/NGS_Overview/">NGS Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../using_git/Using_Git/">Using Git and Github for revision control</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../var_detect_advanced/var_detect_advanced_background/">Variant Detection Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../hpc/">Introduction to HPC</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../unix/">Introduction to Unix</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../python_overview/python_overview/">Python Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="">Microbial de novo Assembly for Illumina Data</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="">Identifying proteins from mass spectrometry data</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../background_galaxy/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#identifying-proteins-from-mass-spec-data">Identifying proteins from mass spec data</a></li>
+        
+            <li><a href="#overview">Overview</a></li>
+        
+            <li><a href="#login-to-galaxy">Login to Galaxy</a></li>
+        
+            <li><a href="#import-mass-spec-data">Import mass spec data</a></li>
+        
+            <li><a href="#basic-properties-of-the-data">Basic properties of the data</a></li>
+        
+            <li><a href="#alternate-data-formats">Alternate data formats</a></li>
+        
+            <li><a href="#obtain-a-search-database">Obtain a Search Database</a></li>
+        
+            <li><a href="#run-a-search-using-xtandem">Run a search using X!Tandem</a></li>
+        
+            <li><a href="#convert-results-to-tabular-format">Convert Results to tabular format</a></li>
+        
+            <li><a href="#sort-tabular-outputs">Sort tabular outputs</a></li>
+        
+            <li><a href="#convert-raw-scores-to-probabilities">Convert raw scores to probabilities</a></li>
+        
+            <li><a href="#perform-protein-inference">Perform Protein Inference</a></li>
+        
+            <li><a href="#functional-enrichment-analysis">Functional enrichment analysis</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="identifying-proteins-from-mass-spec-data">Identifying proteins from mass spec data</h1>
+<h2 id="overview">Overview</h2>
+<p>This tutorial describes how to identify a list of proteins from tandem mass spectrometry data. </p>
+<p>Analyses of this type are a fundamental part of most proteomics studies. The basic idea is to match tandem ms spectra obtained from a sample with equivalent theoretical spectra from a reference protein database. The process is referred to as "protein database search" or even "protein sequencing", although amino acid sequences are not obtained <em>de novo</em> with this method.</p>
+<p>The data used in this tutorial were obtained from a single run on an Orbitrap Elite mass spectrometer.  The sample itself corresponds to a purified organelle from Mouse cells.  </p>
+<p>The aim of the tutorial will be to create a list of all proteins that can be confidently said to be present in the sample, and then to use this list to guess the identity of the "mystery" organelle.</p>
+<p>This tutorial uses free software including;</p>
+<ul>
+<li>The <a href="http://www.thegpm.org/tandem/">X!Tandem</a> search engine</li>
+<li>The <a href="http://en.wikipedia.org/wiki/Trans-Proteomic_Pipeline">Trans Proteomic Pipeline</a> (TPP) for post-search validation</li>
+<li>The <a href="https://github.com/iracooke/protk">Protk</a> tool suite for various conversion tasks and to make working with X!Tandem and the TPP easier</li>
+<li>The <a href="http://galaxyproject.org/">Galaxy</a> platform to bring all these tools together</li>
+</ul>
+<h2 id="login-to-galaxy">Login to Galaxy</h2>
+<ol>
+<li>
+<p>Open a browser and go to a Galaxy server.</p>
+<ul>
+<li>You can use a galaxy server of your own <strong>or</strong></li>
+<li><a href="http://galaxy-tut.genome.edu.au">Galaxy Tute</a> at genome.edu.au</li>
+</ul>
+<blockquote>
+<p><img src="../media/tips.png" alt="Tip" height="42" width="42"/> Use a supported browser. Firefox/Safari/Chrome all work well</p>
+<p>If you use your own galaxy server you will need to make sure you have the <a href="../github.com/iracooke/protk-galaxytools">protk proteomics tools</a> installed.</p>
+</blockquote>
+</li>
+<li>
+<p>Register as a new user if you don’t already have an account on that particular server</p>
+</li>
+</ol>
+<h2 id="import-mass-spec-data">Import mass spec data</h2>
+<ol>
+<li><a href="../background_galaxy#create-a-new-history">Create a new history</a> in Galaxy and name it "Organelle Tutorial"</li>
+<li>
+<p><strong>Download datasets</strong> using the Galaxy uploader tool. </p>
+<p>Open this tool by clicking the button as shown below</p>
+<p><img alt="Uploader tool" src="../media/galaxy_uploader.png" /></p>
+<p>After opening the tool select <em>Paste/Fetch data</em> and paste the following URL into the box that appears.  Then click <em>Start</em> to initiate the download.</p>
+<pre><code>https://swift.rc.nectar.org.au:8888/v2/AUTH_ffb00634530a4c37a0b8b08c48068adf/proteomics_tutorial/OrganelleSample.mzML
+</code></pre>
+<p>After the download is finished you should have a single item in your history.</p>
+</li>
+<li>
+<p><strong>Rename</strong> the history item by clicking the pencil icon beside it to "Edit attributes".</p>
+<p><img alt="Edit attributes icon" src="../media/galaxy_edit_attributes.png" /></p>
+<p>This should bring up a dialog box where you can edit the name.  </p>
+<p>Change the name by removing everything up to the last forward slash "/"</p>
+<p>Your item should then be named <em>OrganelleSample.mzML</em></p>
+<p>Dont forget to click "Save"</p>
+</li>
+</ol>
+<h2 id="basic-properties-of-the-data">Basic properties of the data</h2>
+<p><strong>Format:</strong></p>
+<p>Mass spectrometry data comes in many different formats and the first step in a proteomics analysis often involves data conversion or pre-processing. You can read more about <a href="../background_data_formats/">mass spectrometry data formats here</a> </p>
+<div class="showable-container question showable-hidden" id="showable0">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle0"><span class="link-like" id="showablelink0"> 1) What format is the OrganelleSample.mzML file?</span></div>
+</div>
+</div>
+<script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+<div class="showable-container hint showable-hidden" id="showable1">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle1"><a href="" id="showablelink1">Hint</a></div>
+<div class="showable-body hint" id="showablebody1">
+<p>Try clicking the title bar on the data in your galaxy history.  This will toggle display of some additional information about the data.</p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink1").click(function(e){
+            e.preventDefault();
+            $("#showable1").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable2">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle2"><a href="" id="showablelink2">Answer</a></div>
+<div class="showable-body answer" id="showablebody2">
+<ul>
+<li>mzML</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink2").click(function(e){
+            e.preventDefault();
+            $("#showable2").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<p><strong>MS versus MS/MS:</strong></p>
+<p>A key feature of <em>Tandem</em> mass spectrometry is the acquisition of mass spectra (spectra) that measure the masses of precursor ions (whole peptides) as well as spectra that measure the fragment masses of a single selected peptide.  These two types of measurements are called <strong>MS</strong> and <strong>MS/MS</strong> spectra respectively.  The following schematic shows how an <strong>MS/MS</strong> scan results from the fragmentation of a selected product ion.  Often multiple <strong>MS/MS</strong> spectra are obtained for each <strong>MS</strong> scan, selecting different precursor masses each time so that as many peptides as possible can be analyzed.</p>
+<p><img alt="Tandem MS Schematic" src="../media/tandem_ms.png" /></p>
+<p><strong>Number of spectra:</strong></p>
+<p>Click the eye icon on the history item to view the <em>mzML</em> file as text.  The file is almost impossible to read by hand but with some text searching we will be able to deduce the number of <strong>MS</strong> and <strong>MS/MS</strong> spectra in the file.</p>
+<p>Now try searching for the text "MS1 spectrum" in the page using your web browser's search function.  Looking closely you should see that this text appears once for every <strong>MS1</strong> spectrum in the file (plus it occurs one extra time at the top of the file as part of the file description).  The file is large though and the browser can only see the first megabyte of it. </p>
+<p>Now search for the text "spectrumList count". It should bring you to a line in the file that says spectrumList count="24941".  There are a total of 24941 spectra in the entire file including both <strong>MS</strong> and <strong>MS/MS</strong> spectra.</p>
+<div class="showable-container question showable-hidden" id="showable3">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle3"><span class="link-like" id="showablelink3"> 2) How many <strong>MS</strong> spectra are there in this dataset?</span>
+</div>
+</div>
+</div>
+<div class="showable-container hint showable-hidden" id="showable4">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle4"><a href="" id="showablelink4">Hint</a></div>
+<div class="showable-body hint" id="showablebody4">
+<p>To answer this question you will need to use the <em>Select</em> tool from the <em>Filter and Sort</em> submenu to select lines matching the text "MS1 spectrum" in the whole file.  Then use the <em>Line/Word/Character count</em> tool from the <em>Text Manipulation</em> submenu to count the number of lines returned by running the <em>Select</em> tool.</p>
+<div class="showable-container showable-hidden" id="showable5">
+<div class="showable-inner">
+<div class="showable-header" id="showabletitle5"><a href="" id="showablelink5">More</a> &lt;- and here to show more</div>
+<div class="showable-body" id="showablebody5">
+<p>The text "MS1 spectrum" also appears at the top of the file as part of its description so you will need to subtract 1 from your answer</p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink5").click(function(e){
+            e.preventDefault();
+            $("#showable5").toggleClass("showable-hidden");
+            if ($("#showable5").hasClass("showable-hidden")) {
+                $("#showablelink5").text("More");
+            } else {
+                $("#showablelink5").text("Less");
+            }
+        });
+    });
+    </script>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink4").click(function(e){
+            e.preventDefault();
+            $("#showable4").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable6">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle6"><a href="" id="showablelink6">Answer</a></div>
+<div class="showable-body answer" id="showablebody6">
+<ul>
+<li>3142</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink6").click(function(e){
+            e.preventDefault();
+            $("#showable6").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<blockquote>
+<p>In the previous exercise we used two galaxy tools in succession to find out the number of items in a file that matched some text. Future exercises use the same technique so you might find it useful to create a tiny workflow to automate this proceedure. <a href="../background_findcountitems_workflow/">See the instructions here</a></p>
+</blockquote>
+<p>Prior to the development of tandem mass spectrometry, peptides and proteins were detected purely by matching <strong>MS</strong> peaks against the masses of whole peptides via <a href="https://en.wikipedia.org/wiki/Peptide_mass_fingerprinting">Peptide Mass Fingerprinting</a>.  This has largely been superceded by tandem mass spectrometry which gains much greater specificity by using the <strong>MS/MS</strong> spectra.  In this tutorial only the <strong>MS/MS</strong> spectra will be used.</p>
+<div class="showable-container question showable-hidden" id="showable7">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle7"><span class="link-like" id="showablelink7"> 3) How many <strong>MS/MS</strong> spectra are there in this dataset?</span>
+</div>
+</div>
+</div>
+<div class="showable-container hint showable-hidden" id="showable8">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle8"><a href="" id="showablelink8">Hint</a></div>
+<div class="showable-body hint" id="showablebody8">
+<p>Use the fact that the file contains a total of 24941 spectra with your answer to the previous question about <strong>MS</strong> spectra.</p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink8").click(function(e){
+            e.preventDefault();
+            $("#showable8").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable9">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle9"><a href="" id="showablelink9">Answer</a></div>
+<div class="showable-body answer" id="showablebody9">
+<ul>
+<li>21799</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink9").click(function(e){
+            e.preventDefault();
+            $("#showable9").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<h2 id="alternate-data-formats">Alternate data formats</h2>
+<p>Another format you are likely to encounter for tandem mass spectrometry data is <em>Mascot Generic Format</em> or <em>mgf</em>.  Mascot Generic Format (<em>mgf</em>) is the data file format preferred by the <em>Mascot</em> search engine.  It is a text based format is much easier to read by hand than the <em>mzML</em> file.  Each spectrum appears between "BEGIN IONS" and "END IONS" statements and simply consists of (<em>mz</em>,<em>intensity</em>) pairs.  Additional summary information about the precursor (whole peptide) ion such as its mass, retention time and charge are included. </p>
+<ol>
+<li>
+<p>Download the Organelle Sample data in <em>mgf</em> format</p>
+<p>Use the <em>Paste/Fetch data</em> tool again and paste the following URL into the box that appears.  Then click <em>Start</em> to initiate the download.</p>
+<pre><code>https://swift.rc.nectar.org.au:8888/v2/AUTH_ffb00634530a4c37a0b8b08c48068adf/proteomics_tutorial/OrganelleSample.mgf
+</code></pre>
+</li>
+<li>
+<p>Inspect the data manually by viewing it in Galaxy. Try to get a feel for the way data is organised within the file.</p>
+</li>
+</ol>
+<div class="showable-container question showable-hidden" id="showable10">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle10"><span class="link-like" id="showablelink10"> 4) How many spectra are there in this dataset and what type of spectra do you think they are?</span>
+</div>
+</div>
+</div>
+<div class="showable-container hint showable-hidden" id="showable11">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle11"><a href="" id="showablelink11">Hint</a></div>
+<div class="showable-body hint" id="showablebody11">
+<p>Use the same technique you used for the previous exercise (or your workflow). Remember that for every spectrum there is one "BEGIN IONS" statement in the file.</p>
+<div class="showable-container showable-hidden" id="showable12">
+<div class="showable-inner">
+<div class="showable-header" id="showabletitle12"><a href="" id="showablelink12">More</a> &lt;- and here to show more</div>
+<div class="showable-body" id="showablebody12">
+<p>Consider your answers to questions 3 and 4</p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink12").click(function(e){
+            e.preventDefault();
+            $("#showable12").toggleClass("showable-hidden");
+            if ($("#showable12").hasClass("showable-hidden")) {
+                $("#showablelink12").text("More");
+            } else {
+                $("#showablelink12").text("Less");
+            }
+        });
+    });
+    </script>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink11").click(function(e){
+            e.preventDefault();
+            $("#showable11").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable13">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle13"><a href="" id="showablelink13">Answer</a></div>
+<div class="showable-body answer" id="showablebody13">
+<ul>
+<li>21799</li>
+<li>MS/MS</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink13").click(function(e){
+            e.preventDefault();
+            $("#showable13").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<h2 id="obtain-a-search-database">Obtain a Search Database</h2>
+<p>Setting up a search database is a critical step.  For this tutorial we have created a database for you, but if you need to create a database for your own data you'll need to consider the following key issues;</p>
+<ul>
+<li>Database size</li>
+<li>Whether to include decoys</li>
+<li>What types of variants to include if any</li>
+<li>How to format your database identifiers</li>
+</ul>
+<p>More details are provided <a href="../background_protein_databases/">here</a>.</p>
+<ol>
+<li>
+<p>Download a database of Mouse proteins in <em>fasta</em> format</p>
+<p>Use the <em>Paste/Fetch data</em> tool again and paste the following URL into the box that appears.  Then click <em>Start</em> to initiate the download.</p>
+<pre><code>https://swift.rc.nectar.org.au:8888/v2/AUTH_ffb00634530a4c37a0b8b08c48068adf/proteomics_tutorial/UniprotMouseD_20140716.fasta
+</code></pre>
+</li>
+<li>
+<p>Inspect the first few items in the database in Galaxy.  The file is in <a href="https://en.wikipedia.org/wiki/FASTA_format">Fasta</a> format which means that each entry has a single description line that starts with a "&gt;" followed by a unique identifier and then some general descriptive information.  The actual sequence of amino acids is given after the description line. Take note of the format of the database identifiers. They are in Uniprot format and look like this;</p>
+<pre><code>sp|Q9CQV8|1433B_MOUSE
+</code></pre>
+<p>The database also includes decoy sequences, appended at the end.  They have identifiers like this;</p>
+<pre><code>decoy_rp75404
+</code></pre>
+</li>
+</ol>
+<div class="showable-container question showable-hidden" id="showable14">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle14"><span class="link-like" id="showablelink14"> 5) What is the ratio of decoys to non-decoys in the database?
+</span>
+</div>
+</div>
+</div>
+<div class="showable-container hint showable-hidden" id="showable15">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle15"><a href="" id="showablelink15">Hint</a></div>
+<div class="showable-body hint" id="showablebody15">
+<p>Decoys are easiest to search for because they all start with "decoy_". The total number of database entries can be found simply expanding the fasta file in your history (by clicking on its title).</p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink15").click(function(e){
+            e.preventDefault();
+            $("#showable15").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable16">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle16"><a href="" id="showablelink16">Answer</a></div>
+<div class="showable-body answer" id="showablebody16">
+<ul>
+<li>1:1</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink16").click(function(e){
+            e.preventDefault();
+            $("#showable16").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<h2 id="run-a-search-using-xtandem">Run a search using X!Tandem</h2>
+<p>A large number of search engines now exist for proteomics data.  This exercise uses <em>X!Tandem</em> which is one of the fastest and most widely used. Other search engines include <em>OMSSA</em>, <em>MS-GF+</em> and <em>Mascot</em>.</p>
+<ol>
+<li>Select the <em>X!Tandem Search</em> tool</li>
+<li>Enter parameters as shown in the table below (leave all others at their defaults)</li>
+<li>Click Execute</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uploaded Fasta File</td>
+<td><code>UniprotMouseD_20140716.fasta</code></td>
+</tr>
+<tr>
+<td>MSMS File</td>
+<td><code>OrganelleSample.mgf</code></td>
+</tr>
+<tr>
+<td>Variable Modifications</td>
+<td><code>Oxidation M</code></td>
+</tr>
+<tr>
+<td>Fixed Modifications</td>
+<td><code>Carbamidomethyl C</code></td>
+</tr>
+<tr>
+<td>Missed Cleavages Allowed</td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td>Enzyme</td>
+<td><code>Trypsin</code></td>
+</tr>
+<tr>
+<td>Fragment Ion Tolerance</td>
+<td><code>0.5</code></td>
+</tr>
+<tr>
+<td>Precursor Ion Tolerance</td>
+<td><code>10 ppm</code></td>
+</tr>
+</tbody>
+</table>
+<p>The search should run for about 5-10 minutes and will produce an output file in <em>X!Tandem</em> xml format. A much more useful format is <em>pepXML</em> so the next step in the analysis will be to run a tool to convert from tandem to pepXML.</p>
+<ol>
+<li>Select the <em>Tandem to pepXML</em> tool</li>
+<li>Select the output from the previous step as input and click <em>Execute</em></li>
+</ol>
+<p>While the search is running, read some background theory on <a href="../background_search_engines/">how search engine's work</a>.</p>
+<h2 id="convert-results-to-tabular-format">Convert Results to tabular format</h2>
+<p>Although the <em>pepXML</em> format is useful as input to other tools it is not designed to be read or analyzed directly. Galaxy includes a tool to convert <em>pepXML</em> into tabular (tab separated) format, which is much easier to read.  Tabular format also has the advantage that it can be downloaded and opened using many other programs including <em>Excel</em> and <a href="http://cran.r-project.org/">R</a>.</p>
+<ol>
+<li>Select the <em>pepXML to Table</em> tool</li>
+<li>Select the <em>pepXML</em> file produced in the previous step as input and click <em>Execute</em></li>
+</ol>
+<p>To get the most out of tabular files it is often necessary to know the column number corresponding to columns of interest.  Explore the column assignments in your tabular file by clicking on its title in your galaxy history.  This will show extra details about the item, including a handy preview where column numbers are displayed.</p>
+<div class="showable-container question showable-hidden" id="showable17">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle17"><span class="link-like" id="showablelink17"> 6) In what column number is the <em>assumed_charge</em> of peptides in the <em>pepXML</em> tabular file?</span></div>
+</div>
+</div>
+<div class="showable-container answer showable-hidden" id="showable18">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle18"><a href="" id="showablelink18">Answer</a></div>
+<div class="showable-body answer" id="showablebody18">
+<ul>
+<li>3</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink18").click(function(e){
+            e.preventDefault();
+            $("#showable18").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<h2 id="sort-tabular-outputs">Sort tabular outputs</h2>
+<p>Examine the tabular output file from the previous step.  It contains many columns, of which the most interesting are probably the raw search engine score and the name of the protein from which each peptide has been derived. Note the presence of plenty of decoy proteins among the results.  These decoys should tend to have quite poor scores compared with real hits.  The <em>raw score</em> for <em>X!Tandem</em> searches is an <em>E-value</em>.  To push these decoys to the bottom of the list we can sort the data by <em>raw score</em>. </p>
+<ol>
+<li>Select the <em>Sort</em> data tool from the <em>Filter and Sort</em> menu in the left pane of Galaxy</li>
+<li>Choose to sort on <em>raw_score</em>.  This is column c10 </li>
+<li>Select <em>Ascending order</em> for the sort direction (small E-values are good) and click <em>Execute</em></li>
+</ol>
+<p>Browse the resulting dataset.  The top of the file should now have very few decoys.</p>
+<h2 id="convert-raw-scores-to-probabilities">Convert raw scores to probabilities</h2>
+<p>Raw <em>X!Tandem</em> scores only give a rough estimate of the reliability of each peptide to spectrum match (PSM). A better estimate can be obtained by running a tool that uses global statistical properties of the search to assign a probability to each PSM of being correct.  A number of tools exist for this, and in this tutorial we use <em>Peptide Prophet</em>, which can work with a wide variety of different search engine scoring systems. It is extremely useful as it effectively converts disparate scores to the common scale of probability. The probabilities produced by <em>Peptide Prophet</em> can be used to set a threshold for acceptance.  For example we could decide to accept only PSM's with a probability greater than 0.95. Note that this is not the same as the False Discovery Rate which is computed by taking (1-p) for all the accepted PSM's and dividing by the total number of accepted PSM's. A widely used alternative to <em>Peptide Prophet</em> is <a href="http://per-colator.com/">Percolator</a>.</p>
+<p>If you're curious about how <em>Peptide Prophet</em> works, take a look at <a href="http://proteome-software.wikispaces.com/file/view/peptide_prophet_dissected.pdf">this explainer</a>, or <a href="http://www.proteomecenter.org/classpubs/2keller.pdf">the original paper</a></p>
+<ol>
+<li>Select the <em>Peptide Prophet</em> tool</li>
+<li>Select the <em>X!Tandem</em> output in <em>pepXML</em> format generated earlier as input</li>
+<li>Check the box that says <em>Use decoys to pin down the negative distribution</em>.</li>
+<li>Convert the resulting <em>pepXML</em> file to tabular using the <em>PepXML to Table</em> tool</li>
+</ol>
+<p>Take a look at the resulting tabular file.  Note that this time the <em>peptideprophet_prob</em> column is populated and contains numbers between 0 and 1.</p>
+<div class="showable-container question showable-hidden" id="showable19">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle19"><span class="link-like" id="showablelink19"> 7) How many PSM's have a peptideprophet probability greater than or equal to 0.95</span></div>
+</div>
+</div>
+<div class="showable-container hint showable-hidden" id="showable20">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle20"><a href="" id="showablelink20">Hint</a></div>
+<div class="showable-body hint" id="showablebody20">
+<p>Use the <em>Filter</em> tool from the <em>Filter and Sort</em> submenu. Also remember that Peptide Prophet probability is given in a column called <em>peptideprophet_prob</em>.  The syntax for "greater than or equal to" in the <em>Filter</em> tool is &gt;=.</p>
+<div class="showable-container showable-hidden" id="showable21">
+<div class="showable-inner">
+<div class="showable-header" id="showabletitle21"><a href="" id="showablelink21">More</a> &lt;- and here to show more</div>
+<div class="showable-body" id="showablebody21">
+<p>Use this text in <em>match with condition</em> field of the <em>Filter and Sort</em> tool.</p>
+<pre><code>c11&gt;=0.95
+</code></pre>
+<p>To answer the second question use the <em>Select</em> tool on the filtered table to select lines matching "decoy_"</p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink21").click(function(e){
+            e.preventDefault();
+            $("#showable21").toggleClass("showable-hidden");
+            if ($("#showable21").hasClass("showable-hidden")) {
+                $("#showablelink21").text("More");
+            } else {
+                $("#showablelink21").text("Less");
+            }
+        });
+    });
+    </script>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink20").click(function(e){
+            e.preventDefault();
+            $("#showable20").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable22">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle22"><a href="" id="showablelink22">Answer</a></div>
+<div class="showable-body answer" id="showablebody22">
+<ul>
+<li>3808</li>
+<li>21</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink22").click(function(e){
+            e.preventDefault();
+            $("#showable22").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container question showable-hidden" id="showable23">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle23"><span class="link-like" id="showablelink23"> 8) What proportion of MS/MS spectra in the original data file produce a reliable (probability greater than or equal to 0.95) peptide to spectrum match (PSM)</span></div>
+</div>
+</div>
+<div class="showable-container hint showable-hidden" id="showable24">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle24"><a href="" id="showablelink24">Hint</a></div>
+<div class="showable-body hint" id="showablebody24">
+<p>Consider your answer to question 7 relative to the total number of MS/MS spectra in the file (question 3)</p>
+<div class="showable-container showable-hidden" id="showable25">
+<div class="showable-inner">
+<div class="showable-header" id="showabletitle25"><a href="" id="showablelink25">More</a> &lt;- and here to show more</div>
+<div class="showable-body" id="showablebody25">
+<p>To take account of decoys remember that for every decoy in the results there is likely to be another non-decoy that is incorrect.</p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink25").click(function(e){
+            e.preventDefault();
+            $("#showable25").toggleClass("showable-hidden");
+            if ($("#showable25").hasClass("showable-hidden")) {
+                $("#showablelink25").text("More");
+            } else {
+                $("#showablelink25").text("Less");
+            }
+        });
+    });
+    </script>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink24").click(function(e){
+            e.preventDefault();
+            $("#showable24").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable26">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle26"><a href="" id="showablelink26">Answer</a></div>
+<div class="showable-body answer" id="showablebody26">
+<ul>
+<li>17.27%</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink26").click(function(e){
+            e.preventDefault();
+            $("#showable26").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<h2 id="perform-protein-inference">Perform Protein Inference</h2>
+<p>Up to this point we have looked at peptide to spectrum matches <em>PSMs</em>.  Each of the peptides observed will have come from a protein sequence in the <em>fasta</em> file that we used as a database, and this protein is recorded along with the <em>PSM</em> itself in all of the result tables we've viewed so far.  Unfortunately, the process of inferring the existence of proteins based on these <em>PSMs</em> is much more complicated than that because some peptides are found in more than one protein, and of course some proteins are supported by more than one <em>PSM</em>.</p>
+<p>The <em>Protein Prophet</em> tool can be used to run a proper protein inference analysis, and assigns probabilities to individual proteins, as well as groups of related proteins.</p>
+<ol>
+<li>Select the <em>Protein Prophet</em> tool</li>
+<li>Choose the <em>pepXML</em> formatted output from <em>Peptide Prophet</em> as input and click <em>Execute</em></li>
+<li>Convert the resulting <em>protXML</em> to tabular using the <em>protXML to Table</em> tool.</li>
+</ol>
+<div class="showable-container question showable-hidden" id="showable27">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle27"><span class="link-like" id="showablelink27"> 9) How many proteins are there with protein prophet probability greater than or equal to 0.99?</span></div>
+</div>
+</div>
+<div class="showable-container hint showable-hidden" id="showable28">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle28"><a href="" id="showablelink28">Hint</a></div>
+<div class="showable-body hint" id="showablebody28">
+<p>Filter on column 6 <em>protein_probability</em></p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink28").click(function(e){
+            e.preventDefault();
+            $("#showable28").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable29">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle29"><a href="" id="showablelink29">Answer</a></div>
+<div class="showable-body answer" id="showablebody29">
+<ul>
+<li>601</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink29").click(function(e){
+            e.preventDefault();
+            $("#showable29").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<p>If you have time, read over <a href="../background_protein_prophet/">these notes</a> on the Protein Prophet output.  Explore your output (use the unfiltered tabular output) to find examples of different kinds of Protein groupings.</p>
+<h2 id="functional-enrichment-analysis">Functional enrichment analysis</h2>
+<p>This step will allow you to discover the identity of the Organelle that was used to create the sample.  </p>
+<p>We use the GOrilla gene ontology enrichment analysis tool (a web based tool) to discover GO terms that are over-represented in proteins at the top of our list compared with those that are assigned very low probabilities (at the bottom).</p>
+<ol>
+<li>Start with unfiltered tabular protein prophet results</li>
+<li>Use the Cut columns tool from the Text Manipulation menu to extract the third column from the filtered protein table (contains <em>protein_name</em>). </li>
+<li>Convert the "pipes" that separate parts of the protein_name into separate columns using the <em>Convert delimiters to TAB</em> tool in the <em>Text manipulation</em> submenu of Galaxy. This should result in a file with 3 columns</li>
+<li>Use the <em>Cut columns</em> tool again to cut the second column from this dataset</li>
+<li>Download this file to your desktop and rename it to <em>organelle.txt</em></li>
+<li>Open the <a href="http://cbl-gorilla.cs.technion.ac.il/">GOrilla</a> web page in your web browser</li>
+<li>Select <em>Organism</em> as Mouse</li>
+<li>Upload the <em>organelle.txt</em> file as a ranged gene list</li>
+<li>Choose <em>Component</em> for the ontology</li>
+<li>Submit</li>
+</ol>
+<div class="showable-container question showable-hidden" id="showable30">
+<div class="showable-inner">
+<div class="showable-header question" id="showabletitle30"><span class="link-like" id="showablelink30"> 9) What <strong>intracellular</strong> organelle was enriched in the sample?</span></div>
+</div>
+</div>
+<div class="showable-container hint showable-hidden" id="showable31">
+<div class="showable-inner">
+<div class="showable-header hint" id="showabletitle31"><a href="" id="showablelink31">Hint</a></div>
+<div class="showable-body hint" id="showablebody31">
+<p>Ignore terms relating to <em>exosomes</em></p>
+<p>In the resulting output look to the most enriched and most specific GO terms. </p>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink31").click(function(e){
+            e.preventDefault();
+            $("#showable31").toggleClass("showable-hidden");
+        });
+    });
+    </script>
+<div class="showable-container answer showable-hidden" id="showable32">
+<div class="showable-inner">
+<div class="showable-header answer" id="showabletitle32"><a href="" id="showablelink32">Answer</a></div>
+<div class="showable-body answer" id="showablebody32">
+<ul>
+<li>Mitochondria</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#showablelink32").click(function(e){
+            e.preventDefault();
+            $("#showable32").toggleClass("showable-hidden");
+        });
+    });
+    </script></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../includes/media/delayed-jquery.js"></script>
+        <script src="../../../includes/media/mdx_showable.js"></script>
+    </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Protein Databases - LSCC Documentation</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable_user.css" rel="stylesheet">
+        <link href="../../../includes/media/slides.css" rel="stylesheet">
+        <link href="../../../includes/media/tute.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">LSCC Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../ngs_overview/NGS_Overview/">NGS Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../using_git/Using_Git/">Using Git and Github for revision control</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../var_detect_advanced/var_detect_advanced_background/">Variant Detection Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../hpc/">Introduction to HPC</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../unix/">Introduction to Unix</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../python_overview/python_overview/">Python Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="">Microbial de novo Assembly for Illumina Data</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="">Identifying proteins from mass spectrometry data</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../background_findcountitems_workflow/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../background_search_engines/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#protein-databases">Protein Databases</a></li>
+        
+            <li><a href="#large-vs-small-database">Large vs Small Database</a></li>
+        
+            <li><a href="#typical-sources-of-data-for-search-databases">Typical sources of data for search databases</a></li>
+        
+            <li><a href="#should-i-include-decoys">Should I include decoys?</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="protein-databases">Protein Databases</h1>
+<p>In a perfect experiment we would obtain fragment ions for all the <code>b,y</code> pairs of each peptide.  If peaks can be unambiguously identified for all these pairs then the sequence of a peptide can simply be read off from the fragmentation spectrum itself.  Unfortunately this is almost never the case using current instrumentation, and the only practical method to determine the sequences of peptides and proteins present in a sample is to compare spectra with a database of potential proteins.  This <code>database</code> is usually just a <code>FASTA</code> formatted file containing amino acid sequences for all known proteins from your study organism.  Constructing this database is a crucial first step in any proteomics analysis because only peptide sequences present in the database will appear in the results.  In order to detect a peptide, its exact sequence must be explicitly included in the database. </p>
+<h2 id="large-vs-small-database">Large vs Small Database</h2>
+<p>Since it is impossible to detect a peptide unless it is present in the search database, one might consider using a very large database such as the full content of <code>NCBInr</code>.  There are two problems with this.  The most important is that the sensivity of a search goes down as the search space goes up, which means that searches on large databases often return far fewer hits.  Another, more practical issue is that searching a large database often takes an extremely long time, and might even crash your search engine. </p>
+<p>Note that very small databases can also cause problems.  In particular, some search engines, and most search engine post-processing statistical tools attempt to model the shape of peptide-sequence-match (PSM) score distributions.  With a very small database (or with very few spectra) it may not be possible to model these distributions accurately.  In most practical situations this is not an issue.</p>
+<h2 id="typical-sources-of-data-for-search-databases">Typical sources of data for search databases</h2>
+<p><strong>Uniprot.org</strong>: This is the canonical resource for publicly available protein sequences. It includes two large databases <code>SwissProt</code>, which contains manually curated sequences and <code>Trembl</code> which contains sequences automatically generated from genomic and transcriptomic data.</p>
+<p><strong>An Organism Specific database</strong>: In some cases, a community of researchers working on specific organisms will create their own sequence data repositories.  Some of these are well maintained and are the best source of data for that study organism.  Examples include <code>PlasmoDB</code> for Malaria for <code>Flybase</code> for drosophila.</p>
+<p><strong>Transcriptome derived sequences</strong>: If you are working on an organism for which public sequence data are scarce, it may be worth obtaining transcriptomic sequences for it.  If sufficient data are obtained, the resulting assembled transcript sequences can be translated to form a good quality proteomic database.</p>
+<p><strong>Other</strong>: Depending on the project you might want to include sequences for specific variants of interest, or a six-frame translation of a genome. </p>
+<h2 id="should-i-include-decoys">Should I include decoys?</h2>
+<p>Decoys are often useful, but not always needed.  Often, the decision to include decoys depends on the requirements of software that is used downstream of the search. Examples on this wiki that make use of <code>Peptide Prophet</code> typically use decoys because it can use these to 'pin down' the negative distribution.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../includes/media/delayed-jquery.js"></script>
+        <script src="../../../includes/media/mdx_showable.js"></script>
+    </body>
+</html>
