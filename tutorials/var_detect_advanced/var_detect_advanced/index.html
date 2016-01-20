@@ -240,11 +240,18 @@ If you don't already have an account on this server, select from the menu <em>Us
 <li>In the Galaxy tools panel (left), under <em>BASIC TOOLS</em>, click on <em>Get Data</em> and choose <em>Upload File</em>.</li>
 <li>Get the FASTQ files: click <em>Paste/Fetch data</em> and enter these URLs into the text box.
 If you put them in the same upload box, make sure there is a newline between the URLs so that they are really on separate lines.
-    <code>https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/variantCalling_ADVNCD/NA12878.hiseq.wgs_chr20_2mb.30xPE.fastq_1</code>
-    <code>https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/variantCalling_ADVNCD/NA12878.hiseq.wgs_chr20_2mb.30xPE.fastq_2</code></li>
+<div class=code>
+https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/variantCalling_ADVNCD/NA12878.hiseq.wgs_chr20_2mb.30xPE.fastq_1
+<br>
+https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/variantCalling_ADVNCD/NA12878.hiseq.wgs_chr20_2mb.30xPE.fastq_2
+<br>
+</div></li>
 <li>Select <em>Type</em> as <strong>fastqsanger</strong> and click <em>Start</em>. Note that you cannot use Auto-detect for the type here as there are different subtypes of FASTQ and Galaxy can't be sure which is which.</li>
 <li>Get the VCF file: click <em>Paste/Fetch data</em> again to open a new text box, and paste the following URL into the box
-    <code>https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/variantCalling_ADVNCD/dbSNP135_excludingsitesafter129_chr20.vcf</code></li>
+<div class=code>
+https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/variantCalling_ADVNCD/dbSNP135_excludingsitesafter129_chr20.vcf
+<br>
+</div></li>
 <li>This time, you can leave the <em>Type</em> on Auto-detect. Click <em>Start</em>.</li>
 <li>
 <p>Once the upload status for both sets of files turns <em>green</em>, you can click <em>Close</em>. You should now be able to see all three files in the Galaxy history panel (right).</p>

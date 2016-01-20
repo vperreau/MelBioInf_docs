@@ -219,36 +219,42 @@
 <p>The workshop is based on analysis of short read data from the exome of chromosome 22 of a single human individual. There are one million 76bp reads in the dataset, produced on an Illumina GAIIx from exome-enriched DNA. This data was generated as part of the <a href="http://www.1000genomes.org/">1000 genomes</a> Genomes project.</p>
 <h2 id="3-preparation">3. Preparation</h2>
 <ol>
-<li><strong>Make sure you have an instance of Galaxy ready to go.</strong></li>
+<li><strong>Make sure you have an instance of Galaxy ready to go.</strong><ul>
 <li>If not - go to our <a href="http://galaxy-mel.genome.edu.au/galaxy">Melbourne Galaxy</a> instance.</li>
-<li><strong>Import data for the tutorial.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Import data for the tutorial.</strong></p>
+<ul>
 <li>In this case, we are uploading a <a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a> file.</li>
-<li><strong>Method 1</strong></li>
-<li><em>Paste/Fetch data from a URL to Galaxy.</em></li>
+<li><strong>Method 1</strong><br />
+<em>Paste/Fetch data from a URL to Galaxy.</em><ol>
 <li>In the Galaxy tools panel (left), click on <em>Get Data</em> and choose <em>Upload File</em>.</li>
-<li>
-<p>Click <em>Paste/Fetch data</em> and paste the following URL into the box</p>
-<pre><code>https://swift.rc.nectar.org.au:8888/v1/AUTH_a3929895f9e94089ad042c9900e1ee82/VariantDet_BASIC/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq
-</code></pre>
+<li>Click <em>Paste/Fetch data</em> and paste the following URL into the box
+<div class="code">
+https://swift.rc.nectar.org.au:8888/v1/AUTH_a3929895f9e94089ad042c9900e1ee82/VariantDet_BASIC/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq
+<br>
+</div></li>
+<li>Select <em>Type</em> as <strong>fastqsanger</strong> and click <em>Start</em>.</li>
+<li>Once the upload status turns <em>green</em>, it means the upload is complete. You should now be able to see the file in the Galaxy history panel (right).</li>
+</ol>
 </li>
-<li>
-<p>Select <em>Type</em> as <strong>fastqsanger</strong> and click <em>Start</em>.</p>
-</li>
-<li>
-<p>Once the upload status turns <em>green</em>, it means the upload is complete. You should now be able to see the file in the Galaxy history panel (right).</p>
+</ul>
 <p>Alternatively, if you have a local file to upload (<em>For the purpose of this tutorial we can stick with the option above</em>):</p>
-</li>
-<li>
-<p><strong>Method 2</strong></p>
-</li>
-<li><em>Upload data to Galaxy.</em></li>
+<ul>
+<li><strong>Method 2</strong><br />
+<em>Upload data to Galaxy.</em><ol>
 <li>In the Galaxy tools panel (left), click on <em>Get Data</em> and choose <em>Upload File</em>.</li>
 <li>From <em>Choose local file</em> select the downloaded FASTQ file. Select <em>Type</em> as <strong>fastqsanger</strong> and click <em>Start</em>.</li>
 <li>Once the upload status turns <em>green</em>, it means the upload is complete. You should now be able to see the file in the Galaxy history panel (right).</li>
 </ol>
-<p>Summary:
+</li>
+</ul>
+</li>
+</ol>
+<p>Summary:<br />
 So far, we have started a Galaxy instance, got hold of our data and uploaded it to
-the Galaxy instance.
+the Galaxy instance.<br />
 Now we are ready to perform our analysis.</p>
 <h2 id="4-quality-control">4. Quality Control</h2>
 <p>The first step is to evaluate the quality of the raw sequence data. If the quality is poor, then adjustments can be made - e.g. trimming the short reads, or adjusting your expectations of the final outcome!</p>
@@ -261,8 +267,7 @@ Now we are ready to perform our analysis.</p>
 <li>separator</li>
 <li>short read sequence quality scores</li>
 </ol>
-<pre><code>
-e.g.
+<pre><code class="text">e.g.
 identifier:    @61CC3AAXX100125:7:72:14903:20386/1
 read sequence: TTCCTCCTGAGGCCCCACCCACTATACATCATCCCTTCATGGTGAGGGAGACTTCAGCCCTCAATGCCACCTTCAT
 separator:     +
@@ -273,7 +278,7 @@ quality score: ?ACDDEFFHBCHHHHHFHGGCHHDFDIFFIFFIIIIHIGFIIFIEEIIEFEIIHIGFIIIIIGHC
 <p>For more details see <a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a>.</p>
 <h4 id="assessing-read-quality-from-the-fastq-files">Assessing read quality from the FASTQ files</h4>
 <p>From the Galaxy tools panel, select</p>
-<pre><code>
+<pre><code class="text">
 NGS: QC and manipulation &gt; FastQC: Comprehensive QC
 
 The input FASTQ file will be selected by default. Keep the other defaults and click 'Execute'
@@ -281,10 +286,12 @@ The input FASTQ file will be selected by default. Keep the other defaults and cl
 </code></pre>
 
 <p>Note the batch processing interface of Galaxy:</p>
-<p>grey = waiting in queue
-yellow = running
-green = finished
-red = tried to run and failed</p>
+<ul>
+<li>grey = waiting in queue</li>
+<li>yellow = running</li>
+<li>green = finished</li>
+<li>red = tried to run and failed</li>
+</ul>
 <p>Wait for job to be complete.</p>
 <p>Click on the eye icon to view the newly generated data (in this case a set of quality metrics for the FASTQ data).
 Look at the various quality scores. The data looks pretty good - <em>high Per base sequence quality</em> (avg. above 30).</p>
@@ -292,181 +299,216 @@ Look at the various quality scores. The data looks pretty good - <em>high Per ba
 <h2 id="5-alignment-to-the-reference-fastq-to-bam">5. Alignment to the reference - (FASTQ to BAM)</h2>
 <p>The basic process here to map individual reads - from the input sample FASTQ file - to a matching region on the reference genome.</p>
 <ol>
-<li>Map/align the reads with the <a href="http://bio-bwa.sourceforge.net/">BWA</a> tool to Human reference genome 19 (hg19) <a href="http://genome.ucsc.edu/cgi-bin/hgTracks">UCSC hg19</a>.
-  From the Galaxy tools panel, select</li>
-</ol>
+<li>
+<p>Map/align the reads with the <a href="http://bio-bwa.sourceforge.net/">BWA</a> tool to Human reference genome 19 (hg19) <a href="http://genome.ucsc.edu/cgi-bin/hgTracks">UCSC hg19</a>.
+    From the Galaxy tools panel, select
 <div class=code>
-    NGS: Mapping > Map with BWA-MEM [3-5mins]<br>
-
-    From the options:<br>
-    Using reference genome: set to hg19.<br>
-    Single or Paired-end reads: set to Single<br>
-
-    keep other options as default and click execute
-</div>
-
+NGS: Mapping &gt; Map with BWA-MEM [3-5mins]<br>
+<br>
+From the options:<br>
+Using reference genome: set to hg19.<br>
+Single or Paired-end reads: set to Single<br>
+<br>
+keep other options as default and click execute<br>
+</div></p>
 <p><em>Note: This is the longest step in the workshop and will take a few minutes, possibly more depending on how many people are also scheduling mappings</em></p>
-<ol>
-<li>Sort the BAM file.
+</li>
+<li>
+<p>Sort the BAM file.
   From the Galaxy tools panel, select
-  ```
-  NGS: SAM Tools &gt; Sort BAM dataset</li>
-</ol>
-<p>From the options:
-  BAM File: set to the output from the alignment BAM file
-  Sort by: Chromosomal coordinates</p>
-<p>Keep other options as default and click execute
-  ```</p>
-<ol>
-<li>To examine the output sorted BAM file, we need to first convert it into readable <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM</a> format.
+<div class=code>
+NGS: SAM Tools &gt; Sort BAM dataset
+<br><br>
+From the options:
+<br>
+BAM File: set to the output from the alignment BAM file
+<br>
+Sort by: Chromosomal coordinates
+<br><br>
+Keep other options as default and click execute
+<br>
+</div></p>
+</li>
+<li>
+<p>To examine the output sorted BAM file, we need to first convert it into readable <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM</a> format.
   From the Galaxy tools panel, select
-  ```
-  NGS: SAM Tools &gt; BAM-to-SAM</li>
-</ol>
-<p>From the options:
-  BAM File to Convert: set to the output to the sorted BAM file</p>
-<p>Keep other options as default and click execute
-  ```</p>
-<ol>
-<li>Examine the generated Sequence Alignment Map (SAM) file.</li>
+<div class=code>
+NGS: SAM Tools &gt; BAM-to-SAM
+<br><br>
+From the options:
+<br>
+BAM File to Convert: set to the output to the sorted BAM file
+<br><br>
+Keep other options as default and click execute
+<br>
+</div></p>
+</li>
+<li>
+<p>Examine the generated Sequence Alignment Map (SAM) file.</p>
+</li>
 <li>Click the eye icon next to the newly generated file</li>
 <li>Familiarise yourself with the <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM</a> format</li>
 <li>
 <p>Note that some reads have mapped to non-chr22 chromosomes (see column 3).</p>
 <p>This is the essence of alignment algorithms - the aligner does the best it can, but because of compromises in accuracy vs performance and repetitive sequences in the genome, not all the reads will necessarily align to the ‘correct’ sequence or could this be suggesting the presence of a structural variant?</p>
-</li>
-</ol>
 <blockquote>
 <p><img src="../media/tips.png" alt="Tip" height="42" width="42"/>
-  Tip:
-  Galaxy auto-generates a name for all outputs. Therefore, it is advisable to choose a more meaningful name to these outputs.
-  This can be done as follow:
-  Click on the pencil icon (edit attributes) and change Name e.g. Sample.bam or Sample.sam or Sample.sorted.bam etc.</p>
+Tip:
+Galaxy auto-generates a name for all outputs. Therefore, it is advisable to choose a more meaningful name to these outputs.</p>
+<p>This can be done as follows:</p>
+<p>Click on the pencil icon (edit attributes) and change Name e.g. Sample.bam or Sample.sam or Sample.sorted.bam etc.</p>
 </blockquote>
-<ol>
-<li>Assessing the alignment data</li>
-</ol>
+</li>
+<li>
+<p>Assessing the alignment data</p>
 <p><em>Histogram of genome coverage</em>
-  From the Galaxy tools panel, select
-  ```
-  BED tools &gt; Create a histogram of genome coverage</p>
-<p>From the options:
-  The BAM: select the sorted BAM file</p>
-<p>keep other options as default and click execute    <br />
-  ```</p>
-<p>The output format:
-  Output (tab delimited):
-    1. chromosome (or entire genome)
-    2. depth of coverage from features in input file
-    3. number of bases on chromosome (or genome) with depth equal to column 2
-    4. size of chromosome (or entire genome) in base pairs
-    5. fraction of bases on chromosome (or entire genome) with depth equal to column 2</p>
-<p><em>Mapping statistics</em>
-  From the Galaxy tools panel, select</p>
-<p>```
-  NGS: SAM Tools &gt; IdxStats</p>
-<p>From the options:
-  The BAM: select the sorted BAM file</p>
-<p>keep other options as default and click execute<br />
-  ```</p>
-<p>The output format:
-  Output (tab delimited):
-    1. reference sequence identifier (chromosome)
-    2. reference sequence length
-    3. number of mapped reads
-    4. number of placed but unmapped reads  </p>
-<p><em>Check the number of aligned and unaligned reads + other quality metrics</em>
-  From the Galaxy tools panel, select</p>
-<p>```</p>
-<p>NGS: Sam Tools &gt; Flagstat</p>
-<p>From the options:
-  The BAM: select the sorted BAM file</p>
-<p>keep other options as default and click execute</p>
-<p>```</p>
-<p>Note that in this case the statistics are not very informative. This is because the dataset has been generated for this workshop and much of the noise has been removed (and in fact we just removed a lot more noise in the previous step); also we are using single ended read data rather than paired-end so some of the metrics are not relevant.</p>
+From the Galaxy tools panel, select
+<div class=code>
+BED tools &gt; Create a histogram of genome coverage
+<br><br>
+From the options:
+<br>
+The BAM: select the sorted BAM file
+<br><br>
+keep other options as default and click execute
+<br>
+</div>
+The output format (tab delimited):</p>
 <ol>
-<li>Visualize the BAM file.</li>
-<li>Download the sorted BAM file
-  From the Galaxy history panel, select</li>
+<li>chromosome (or entire genome)</li>
+<li>depth of coverage from features in input file</li>
+<li>number of bases on chromosome (or genome) with depth equal to column 2</li>
+<li>size of chromosome (or entire genome) in base pairs</li>
+<li>fraction of bases on chromosome (or entire genome) with depth equal to column 2</li>
 </ol>
-<p>```</p>
-<p>Click on the sorted BAM file.
-  Click on the disk icon &gt; Download dataset
-  Click on the disk icon &gt; Download bam_index</p>
-<p>Result:
-  This will result in two files being downloaded 1) bam file 2) bam index file</p>
-<p>Open [IGV] browser &gt; Open downloaded BAM file &gt; select chromosome 22</p>
-<p>Can't see anything!</p>
-<p>Zoom in further or type a gene of interest and now you should see aligned reads.</p>
-<p>```
-  <a href="../media/igv1.jpg"><img src="../media/igv1.jpg" alt="IGV view 1" width="640px"/></a></p>
-<p>```</p>
+<p><em>Mapping statistics</em></p>
+<p>From the Galaxy tools panel, select
+<div class=code>
+NGS: SAM Tools &gt; IdxStats
+<br><br>
+From the options:
+<br>
+The BAM: select the sorted BAM file
+<br><br>
+keep other options as default and click execute
+<br>
+</div>
+The output format (tab delimited):</p>
+<ol>
+<li>reference sequence identifier (chromosome)</li>
+<li>reference sequence length</li>
+<li>number of mapped reads</li>
+<li>number of placed but unmapped reads  </li>
+</ol>
+<p><em>Check the number of aligned and unaligned reads + other quality metrics</em></p>
+<p>From the Galaxy tools panel, select
+<div class=code>
+NGS: Sam Tools &gt; Flagstat
+<br><br>
+From the options:
+<br>
+The BAM: select the sorted BAM file
+<br><br>
+keep other options as default and click execute
+<br>
+</div></p>
+<p>Note that in this case the statistics are not very informative. This is because the dataset has been generated for this workshop and much of the noise has been removed (and in fact we just removed a lot more noise in the previous step); also we are using single ended read data rather than paired-end so some of the metrics are not relevant.</p>
+</li>
+<li>
+<p>Visualize the BAM file.</p>
+<ul>
+<li>Download the sorted BAM file
+From the Galaxy history panel, select
+<div class=code>
+Click on the sorted BAM file.<br>
+Click on the disk icon &gt; Download dataset<br>
+Click on the disk icon &gt; Download bam_index<br>
+<br>
+Result:<br>
+This will result in two files being downloaded 1) bam file 2) bam index file<br>
+<br>
+Open [IGV] browser &gt; Open downloaded BAM file &gt; select chromosome 22<br>
+<br>
+Can't see anything!<br>
+<br>
+Zoom in further or type a gene of interest and now you should see aligned reads.<br>
+</div></li>
+</ul>
+</li>
+</ol>
+<p><a href="../media/igv1.jpg"><img src="../media/igv1.jpg" alt="IGV view 1" width="640px" style="display:block; margin-left: auto; margin-right:auto;"/></a></p>
 <p>Try looking at region chr22:36,006,744-36,007,406
-  Can you see a few variants?  </p>
-<p>```
-  <a href="../media/igv_mb.jpg"><img src="../media/igv_mb.jpg" alt="IGV view 1" width="640px"/></a></p>
+Can you see a few variants?  </p>
+<p><a href="../media/igv_mb.jpg"><img src="../media/igv_mb.jpg" alt="IGV view 1" width="640px" style="display:block; margin-left: auto; margin-right:auto;"/></a></p>
 <h2 id="6-calling-single-nucleotide-variations-snvs">6. Calling single nucleotide variations (SNVs)</h2>
 <ol>
-<li>Generate a pileup file from the aligned reads (sorted bam file previous step 2). A pileup is essentially a column wise representation of the aligned read - at the base level - to the reference. The pileup file summarises all data from the reads at each genomic region that is covered by at least one read.</li>
-</ol>
+<li>
+<p>Generate a pileup file from the aligned reads (sorted bam file previous step 2). A pileup is essentially a column wise representation of the aligned read - at the base level - to the reference. The pileup file summarises all data from the reads at each genomic region that is covered by at least one read.</p>
 <p>From the Galaxy tools panel, select
-  ```  </p>
-<p>NGS: SAMtools&gt;Generate Pileup</p>
-<p>From the options:
-  Call consensus according to MAQ model = Yes
-  This generates a called 'consensus base' for each chromosomal position.</p>
-<p>keep other options as default and click execute  </p>
-<p>```</p>
+<div class=code>
+NGS: SAMtools&gt;Generate Pileup<br>
+<br>
+From the options:<br>
+Call consensus according to MAQ model = Yes<br>
+This generates a called 'consensus base' for each chromosomal position.<br>
+<br>
+keep other options as default and click execute<br>
+</div></p>
 <p>For each output file, Galaxy tries to assign a datatype attribute to every file. For each output file, Galaxy tries to assign a datatype attribute to every file.</p>
-<p>```</p>
-<p>Firstly, remember to rename output files to something more meaningful e.g. the workflow stage
-  For the above output, click on the pencil icon (edit attributes) and choose Datatype link from the top column.
-  Although it is a tabular file, for downstream processing we want to tell Galaxy that this is a <em>pileup</em> file.</p>
-<p>From the drop-down, select Pileup and click save.</p>
-<p>```</p>
+<p>Firstly, remember to rename output files to something more meaningful e.g. the workflow stage</p>
+<ol>
+<li>For the above output, click on the pencil icon (edit attributes)</li>
+<li>Choose Datatype link from the top column.</li>
+<li>Although it is a tabular file, for downstream processing we want to tell Galaxy that this is a <em>pileup</em> file.</li>
+<li>From the drop-down, select Pileup and click save.</li>
+</ol>
 <blockquote>
 <p><img src="../media/tips.png" alt="Tip" height="42" width="42"/>
  Tip:
-Get familiar with the <a href="https://www.google.com/url?q=https://docs.google.com/document/pub?id%3D1fouC29Lq0CXxQQCpuojrR5RXbdzMdxRf8ZID01XYNqI%23h.931a12a1a6ce&amp;sa=D&amp;usg=AFQjCNE-_ur_EqlMdu0A35ylXxlrNTlktA">Pileup</a> format.
-<em> 1. chromosome
-</em> 2. position
-<em> 3. current reference base
-</em> 4. consensus base from the mapped reads
-<em> 5. consensus quality
-</em> 6. SNV quality
-<em> 7. maximum mapping quality
-</em> 8. coverage
-<em> 9. bases within reads
-</em> 10. quality values
-Further on (9):
-  * Each character represents one of the following: the longer this string, higher the coverage
-  * . = match on forward strand for that base
-  * , = match on reverse strand
-  * ACGTN = mismatch on forward
-  * acgtn = mismatch on reverse
-  * +[0-9]+[ACGTNacgtn]+' = insertion between this reference position and the next
-  * -[0-9]+[ACGTNacgtn]+' = deletion between this reference position and the next
-  * ^ = start of read
-  * $ = end of read
-  * BaseQualities = one character per base in ReadBases, ASCII encoded Phred scores</p>
+Get familiar with the <a href="https://www.google.com/url?q=https://docs.google.com/document/pub?id%3D1fouC29Lq0CXxQQCpuojrR5RXbdzMdxRf8ZID01XYNqI%23h.931a12a1a6ce&amp;sa=D&amp;usg=AFQjCNE-_ur_EqlMdu0A35ylXxlrNTlktA">Pileup</a> format.<br>
+<em> 1. chromosome<br>
+</em> 2. position<br>
+<em> 3. current reference base<br>
+</em> 4. consensus base from the mapped reads<br>
+<em> 5. consensus quality<br>
+</em> 6. SNV quality<br>
+<em> 7. maximum mapping quality<br>
+</em> 8. coverage<br>
+<em> 9. bases within reads<br>
+</em> 10. quality values<br>
+Further on (9):<br>
+  * Each character represents one of the following: the longer this string, higher the coverage<br>
+  * . = match on forward strand for that base<br>
+  * , = match on reverse strand<br>
+  * ACGTN = mismatch on forward<br>
+  * acgtn = mismatch on reverse<br>
+  * +[0-9]+[ACGTNacgtn]+' = insertion between this reference position and the next<br>
+  * -[0-9]+[ACGTNacgtn]+' = deletion between this reference position and the next<br>
+  * ^ = start of read<br>
+  * $ = end of read<br>
+  * BaseQualities = one character per base in ReadBases, ASCII encoded Phred scores<br></p>
 </blockquote>
-<ol>
-<li>Filtering pileup to get a list of SNVs</li>
-</ol>
-<p>The pileup from the above steps described <em>all</em> aligned positions. For the purpose of calling SNVs, we are after:
-    * aligned positions where the consensus base is difference from the reference base
-    * the different consensus base is covered by at least e.g. 10 reads  <br />
-    * removing poor quality bases</p>
+</li>
+<li>
+<p>Filtering pileup to get a list of SNVs</p>
+<p>The pileup from the above steps described <em>all</em> aligned positions. For the purpose of calling SNVs, we are after:</p>
+<ul>
+<li>aligned positions where the consensus base is difference from the reference base</li>
+<li>the different consensus base is covered by at least e.g. 10 reads    </li>
+<li>removing poor quality bases</li>
+</ul>
 <p>From the Galaxy tools panel, select
-  ```
-  NGS: SAM Tools &gt; Filter Pileup</p>
-<p>From the options:
-  which contains = Pileup with ten columns (with consensus)
-  Do not report positions with coverage lower than = 10
-  Convert coordinates to intervals = Yes  </p>
-<p>keep other options as default and click execute  <br />
-  ```
-  How many variants (<em>intervals</em>) do you see?</p>
+<div class=code>
+NGS: SAM Tools &gt; Filter Pileup<br>
+<br>
+From the options:<br>
+which contains = Pileup with ten columns (with consensus)<br>
+Do not report positions with coverage lower than = 10<br>
+Convert coordinates to intervals = Yes<br>
+<br>
+keep other options as default and click execute<br>
+</div></p>
+<p>How many variants (<em>intervals</em>) do you see?</p>
 <p>If you see ~17000 variants - do not be surprised. Our filtering criteria was not very stringent.</p>
 <blockquote>
 <p><img src="../media/tips.png" alt="Tip" height="42" width="42"/>
@@ -476,88 +518,98 @@ Tip:</p>
 </blockquote>
 <p>To further filter the dataset from above, we can use the <em>Filter and sort</em> tool.</p>
 <p>From the Galaxy tools panel, select
-  ```</p>
-<p>Filter and Sort &gt; Filter</p>
-<p>From the options:
-  With following condition = c7&gt;50 (filter on SNV quality (column 7)). This is a score generated by a combination of reads and base quality etc.</p>
-<p>keep other options as default and click execute    </p>
-<p>```</p>
+<div class=code>
+Filter and Sort &gt; Filter<br>
+<br>
+From the options:<br>
+With following condition = c7&gt;50 (filter on SNV quality (column 7)). <br>
+This is a score generated by a combination of reads and base quality etc.<br>
+<br>
+keep other options as default and click execute<br>
+</div></p>
 <p>Note that the number of SNVs has gone down by ~95%, and we're down to 896, which is not too far off the expected number.</p>
 <p>To visualize these variants we need to go back to IGV or any other genome browser of your choice.</p>
 <blockquote>
 <p><img src="../media/tips.png" alt="Tip" height="42" width="42"/>
  Tip:
-Interval file description
-<em> 1. Chromosome
-</em> 2. Start position (0-based)
-<em> 3. End position (1-based)
-</em> 4. Reference base at that position
-<em> 5. Coverage (# reads aligning over that position)
-</em> 6. Bases within reads
-<em> 7. Quality values (phred33 scale, see Galaxy wiki for more)
-</em> 8. Number of A variants
-<em> 9. Number of C variants
-</em> 10. Number of G variants
-<em> 11. Number of T variants
-</em> 12. Quality adjusted coverage
-* 13. Total number of deviants (if Convert coordinates to intervals? is set to yes)</p>
+Interval file description<br>
+<em> 1. Chromosome<br>
+</em> 2. Start position (0-based)<br>
+<em> 3. End position (1-based)<br>
+</em> 4. Reference base at that position<br>
+<em> 5. Coverage (# reads aligning over that position)<br>
+</em> 6. Bases within reads<br>
+<em> 7. Quality values (phred33 scale, see Galaxy wiki for more)<br>
+</em> 8. Number of A variants<br>
+<em> 9. Number of C variants<br>
+</em> 10. Number of G variants<br>
+<em> 11. Number of T variants<br>
+</em> 12. Quality adjusted coverage<br>
+* 13. Total number of deviants (if Convert coordinates to intervals? is set to yes)<br></p>
 </blockquote>
-<ol>
-<li>Convert the variants file to <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1">BED</a> format.</li>
-<li>Start with renaming the variant file to e.g. 'NA12878.filtered.snps'</li>
+</li>
 <li>
-<p>Change the filetype (under the pencil - see tips above) to bed.</p>
+<p>Convert the variants file to <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1">BED</a> format.</p>
+<ul>
+<li>Start with renaming the variant file to e.g. 'NA12878.filtered.snps'</li>
+<li>Change the filetype (under the pencil - see tips above) to bed.</li>
+</ul>
 <blockquote>
 <p>Bed files are similar to Interval files, but follow a stricter structural format</p>
 </blockquote>
-</li>
-<li>
-<p>Download the BED file by clicking on the disc icon and saving to local disk.</p>
-</li>
+<ul>
+<li>Download the BED file by clicking on the disc icon and saving to local disk.</li>
 <li>Assuming the alignment (bam file) is open, load the downloaded bed file.</li>
 <li>Select <em>chr22</em> from the drop-down to see all SNVs.</li>
 <li>The track - <em>NA12878.filtered.snps.bed</em> - now shows an zoomed out view of all SNVs.</li>
-<li>
-<p>Take a look again at the same region as earlier:</p>
-<ul>
+<li>Take a look again at the same region as earlier:</li>
 <li>chr22:36,006,744-36,007,406</li>
 </ul>
-<p><a href="../media/igv_snv.jpg"> <img src="../media/igv_snv.jpg" alt="IGV SNV view" width="640px"/></a></p>
+<p><a href="../media/igv_snv.jpg"> <img src="../media/igv_snv.jpg" alt="IGV SNV view" width="640px" style="display:block; margin-left: auto; margin-right:auto;"/></a></p>
 <blockquote>
 <p>Is this a heterozygous variant?</p>
 </blockquote>
+<ul>
+<li>Now zoom into the region chr22:35,947,503-35,947,667.<blockquote>
+<p>Is this a homozygous variant?</p>
+</blockquote>
 </li>
-<li>
-<p>Now zoom into the region chr22:35,947,503-35,947,667.
-    &gt; Is this a homozygous variant?</p>
+</ul>
 </li>
 </ol>
 <h2 id="7-calling-small-insertions-and-deletions-indels">7. Calling small insertions and deletions (indels)</h2>
 <ol>
 <li>Generate a pileup file from the aligned reads containing only indels.
-  From the Galaxy tools panel, select</li>
+    From the Galaxy tools panel, select</li>
 </ol>
-<p>```</p>
-<p>NGS: SAM Tools &gt; Generate pileup</p>
-<p>From the options:
-  Select the BAM file to generate the pileup file for = sorted bam file
-  Whether or not to print only output pileup lines containing indels = Print only lines containing indels
-  Call consensus according to MAQ model? = yes</p>
-<p>Keep other options as default and click execute    </p>
-<p>```</p>
+<div class=code>
+NGS: SAM Tools > Generate pileup<br>
+<br>
+From the options:<br>
+Select the BAM file to generate the pileup file for = sorted bam file<br>
+Whether or not to print only output pileup lines containing indels = Print only lines containing indels<br>
+Call consensus according to MAQ model? = yes<br>
+<br>
+Keep other options as default and click execute<br>
+</div>
+
 <ol>
-<li>Filtering pileup to get a list of indels</li>
-</ol>
-<p>Unlike the previous pileup, this file will only report putative indels. Like previously, we will need to filter the ~4000 indels down. Therefore, we will filter on:
-    * removing poor quality bases (column 7)
-    * the indel is covered by at least e.g. 10 reads (column 11)</p>
-<p>From the Galaxy tools panel, select</p>
-<p>```</p>
-<p>Filter and Sort &gt; Filter</p>
-<p>From the options:
-  With following condition =  c7&gt;50 and c11&gt;20</p>
-<p>keep other options as default and click execute</p>
-<p>```</p>
+<li>
+<p>Filtering pileup to get a list of indels</p>
+<p>Unlike the previous pileup, this file will only report putative indels. Like previously, we will need to filter the ~4000 indels down. Therefore, we will filter on:</p>
+<ul>
+<li>removing poor quality bases (column 7)</li>
+<li>the indel is covered by at least e.g. 10 reads (column 11)</li>
+</ul>
+<p>From the Galaxy tools panel, select
+<div class=code>
+Filter and Sort &gt; Filter<br>
+<br>
+From the options:<br>
+With following condition =  c7&gt;50 and c11&gt;20<br>
+<br>
+keep other options as default and click execute<br>
+</div></p>
 <p>This filtering strategy reduces the call set by 83% and we are left with <strong>~700 small indels</strong>.</p>
 <p>To visualize, we need to convert from <em>tabular</em> to <em>bed</em>. This is two step process.</p>
 <p>Firstly,</p>
@@ -573,12 +625,12 @@ Interval file description
 <p>Rename this to indels.filtered</p>
 </blockquote>
 <p>Download this file and open it using IGV genome browser.</p>
-<p>```</p>
 <p>Try looking at region chr22:31,854,409-31,854,460
-  Can you see any indels?
-  Also try looking at other regions by zooming out.  </p>
-<p>```
-  <a href="../media/igv_indel.jpg"> <img src="../media/igv_indel.jpg" alt="IGV indel" width="640px"/></a></p>
+Can you see any indels?
+Also try looking at other regions by zooming out.  </p>
+</li>
+</ol>
+<p><a href="../media/igv_indel.jpg"> <img src="../media/igv_indel.jpg" alt="IGV indel" width="640px" style="display:block; margin-left: auto; margin-right:auto;"/></a></p>
 <hr /></div>
         </div>
 
