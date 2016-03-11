@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Introduction to GenomeSpace - LSCC Documentation</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable.css" rel="stylesheet">
+        <link href="../../../includes/media/mdx_showable_user.css" rel="stylesheet">
+        <link href="../../../includes/media/slides.css" rel="stylesheet">
+        <link href="../../../includes/media/tute.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">LSCC Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../">Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../ngs_overview/NGS_Overview/">NGS Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../using_git/Using_Git/">Using Git and Github for revision control</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../gvl_launch/gvl_launch/">Launching a Personal GVL Server</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../hpc/">Introduction to HPC</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../unix/">Introduction to Unix</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../python_overview/python_overview/">Python Overview</a>
+</li>
+
+                    
+                        
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Microbial de novo Assembly for Illumina Data</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../assembly/assembly/">Tutorial</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../assembly/assembly-background/">Method Background</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                    
+                        
+<li >
+    <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
+</li>
+
+                    
+                        
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Variant Detection Advanced</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../var_detect_advanced/var_detect_advanced/">Var detect advanced</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../var_detect_advanced/var_detect_advanced_background/">Var detect advanced background</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                    
+                        
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Identifying proteins from mass spectrometry data</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../proteomics_basic/proteomics_basic/">Tutorial</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../proteomics_basic/background_galaxy/">Galaxy Background</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../proteomics_basic/background_data_formats/">Data Formats Background</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../proteomics_basic/background_findcountitems_workflow/">Create find count items workflow</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../proteomics_basic/background_protein_databases/">Protein Databases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../proteomics_basic/background_search_engines/">Search Engines</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../proteomics_basic/background_protein_prophet/">Protein Prophet</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../alignment/alignment/">Alignment Tutorial</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Introduction to GenomeSpace</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../../alignment/alignment/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../../assembly/assembly-protocol/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#what-is-genomespace">What is GenomeSpace?</a></li>
+        
+    
+        <li class="main "><a href="#prerequisites">Prerequisites</a></li>
+        
+    
+        <li class="main "><a href="#registering-a-genomespace-account">Registering a GenomeSpace account</a></li>
+        
+    
+        <li class="main "><a href="#mounting-a-swift-container">Mounting a swift container</a></li>
+        
+    
+        <li class="main "><a href="#basic-file-manipulation">Basic file manipulation</a></li>
+        
+    
+        <li class="main "><a href="#adding-a-galaxy-service-to-your-account">Adding a Galaxy service to your account:</a></li>
+        
+    
+        <li class="main "><a href="#file-transfer-tofrom-galaxy">File transfer to/from Galaxy</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h2 id="what-is-genomespace">What is GenomeSpace?</h2>
+<p>GenomeSpace is a cloud-based interoperability framework to support integrative genomics analysis through an easy-to-use Web interface. GenomeSpace provides access to a diverse range of bioinformatics tools, and bridges the gaps between the tools, making it easy to leverage the available analyses and visualizations in each of them. The tools retain their native look and feel, with GenomeSpace providing frictionless conduits between them through a lightweight interoperability layer.</p>
+<p>GenomeSpace does not perform any analyses itself; these are done within the member tools wherever they live – desktop, Web service, cloud, in-house server, etc. Rather, GenomeSpace provides tool selection and launch capabilities, and acts as a data highway automatically reformatting data as required when results move from the output of one tool to input for the next.</p>
+<p>The GVL GenomeSpace can be found at <a href="https://genomespace.genome.edu.au">https://genomespace.genome.edu.au</a> .</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>GenomeSpace uses a few dialogue boxes to communicate with the NeCTAR cloud. If you have an AdBlocker installed, the dialogues will not be shown properly. If you have an AdBlocker on your system please disable it for the GenomeSpace.genome.edu.au domain.</p>
+<h2 id="registering-a-genomespace-account">Registering a GenomeSpace account</h2>
+<p>To register a GenomeSpace account you need to have a valid email address and do the following:</p>
+<ul>
+<li>
+<p>Go to <a href="https://genomespace.genome.edu.au/">https://genomespace.genome.edu.au/</a> and click on the "Register new GenomeSpace user" link:
+    <img alt="" src="../media/images/register.png" /></p>
+</li>
+<li>
+<p>Enter your preferred username, password and the valid email address and click the Sign up button.</p>
+<p><em><strong>Note:</strong> You will receive an error if the username has already been taken.</em>
+<img alt="" src="../media/images/user-pas.png" />
+If everything goes right you will see the following page.
+<img alt="" src="../media/images/RegisterComp.png" /></p>
+</li>
+<li>
+<p>Activate your account by following the link in the email from GenomeSpace titled “GenomeSpace user registration”. Your account is now active.</p>
+</li>
+<li>
+<p>Go to <a href="https://genomespace.genome.edu.au/">https://genomespace.genome.edu.au</a> and enter the username and password you created in the previous steps. You will be logged in into GenomeSpace.</p>
+<p>In a few seconds you will be redirected to your Home page.</p>
+<p><img alt="" src="../media/images/GS-explained.png" />
+On this page you can find the following items:</p>
+<ol>
+<li>Your username in the top right corner</li>
+<li>The menu bar</li>
+<li>The application bar</li>
+<li>Your home directory</li>
+<li>The directory under the name <em>Shared to “your username”</em> contains any folders that have been shared to you through the GenomeSpace website.</li>
+<li>The public directory is the directory which contains anything that has been made public to the cloud through the GenomeSpace website.</li>
+</ol>
+</li>
+</ul>
+<h2 id="mounting-a-swift-container">Mounting a swift container</h2>
+<p><em>(These instructions are for the NeCTAR Australian Research Cloud. For any other OpenStack-based cloud storage please change the parameters as necessary.)</em></p>
+<p>NeCTAR object storage is a place that people with NeCTAR credentials can store their data reliably. Containers can be found under the Object Store link in NeCTAR’s dashboard.</p>
+<p>To browse through available containers, go to the NeCTAR dashboard at <a href="https://dashboard.rc.nectar.org.au">https://dashboard.rc.nectar.org.au</a> . On the left hand side of the dashboard you can find the Object Store. By "Containers" you can see all the available containers within your tenancy.</p>
+<p>To mount an available container go to Connect menu bar in GenomeSpace and select Swift Container.
+<img alt="" src="../media/images/GS-swift.png" /></p>
+<p>You will see a new page as follows:</p>
+<p><img alt="" src="../media/images/swift-det.png" /></p>
+<p>To fill out this form you need the following parameters:</p>
+<ol>
+<li><strong>OpenStack EndPoint:</strong> The default value should be correct for NeCTAR: <em>https://keystone.rc.nectar.org.au:5000/v2.0/tokens</em></li>
+<li><strong>User Name:</strong> This is your NeCTAR user name. Your user name can be found at the top right corner of the NeCTAR dashboard as shown below:
+  <img alt="" src="../media/images/Nectar-user.png" /></li>
+<li><strong>Password:</strong> This is your NeCTAR API key. The API key is the key that applications can use to connect to NeCTAR on your behalf. To find your API key:<ul>
+<li>Login to your NeCTAR dashboard account.</li>
+<li>On the top right hand side of your Home click on the setting link
+    <img alt="" src="../media/images/nectar-setting.png" /></li>
+<li>Press the Reset Password button. (Warning: This process will reset your API key. If you have already done this process for any other application you can instead just use your old key.)
+    <img alt="" src="../media/images/nectar-pas.png" /></li>
+</ul>
+</li>
+<li><strong>Tenancy name:</strong> Your NeCTAR Tenancy name (project name). The tenancy name has been assigned to your project by the NeCTAR administration process. <img alt="" src="../media/images/Nectar-Tenancy.JPG" /></li>
+<li><strong>Container name:</strong> The name of the container that you want to connect to. <img alt="" src="../media/images/containers.JPG" /></li>
+</ol>
+<h2 id="basic-file-manipulation">Basic file manipulation</h2>
+<p>Under the containers directory you can perform basic file manipulation as follows:</p>
+<ul>
+<li><strong>Creating a directory:</strong> To create a directory under another directory, right click on the source directory and select "Create Subdirectory". You will be asked for a name and in a few seconds your target directory will be created.</li>
+<li><strong>Uploading a file into a directory:</strong> Uploading a file can be done using drag and drop. Go to the directory you want to upload the file into and drag and drop the file you want to upload into the open area on the right-hand side of the Home directory. The effective area will turn green.</li>
+<li><strong>Deleting a file:</strong> To delete a file, right click on the selected file and select the “Delete”. The file will be deleted in a few seconds.</li>
+<li><strong>Previewing a file:</strong> Under the right click menu you will find the "preview" option, which will show the first 5000 bytes of a file.</li>
+<li><strong>Downloading a file:</strong> To download a file simply right click on the file and select download. Your download will be started in a few seconds.</li>
+<li><strong>Creating a public link:</strong> Right click on the file you want to get the public link for and select the public link. The public link will be shown to you in a few seconds. (Warning: The public link is available for 4 days.)</li>
+<li><strong>Creating a private link:</strong> Right click on the file and select the "view file".</li>
+</ul>
+<h2 id="adding-a-galaxy-service-to-your-account">Adding a Galaxy service to your account:</h2>
+<p><strong>PREREQUISITE: Please make sure you have an account on the Galaxy server you want to add to GenomeSpace. If you have launched a GVL instance, this is a new instance of Galaxy and you will need to register a Galaxy account in your new Galaxy server first.</strong></p>
+<p>The latest GVL image is fully compatible with GenomeSpace. Galaxy launched as part of GVL instances can be connected to GenomeSpace as follows:</p>
+<ol>
+<li>
+<p>From the Menu bar go to the manage menu and select Private Tool.
+    <img alt="" src="../media/images/private-tool.png" /></p>
+</li>
+<li>
+<p>From the opened window press the "Add new" button.      <br />
+<img alt="" src="../media/images/Galaxy.png" /></p>
+</li>
+<li>
+<p>In the new window fill out the form as follows:</p>
+<ul>
+<li>Give a name to your Galaxy</li>
+<li>Give a description (Optional)</li>
+<li>Tool provider GVL (Optional)</li>
+<li>Base URL: http://[Glaxy-ip or DNS]/galaxy/tool_runner?tool_id=genomespace_importer</li>
+<li>Parameter name: URL</li>
+<li>Required: Ticked</li>
+<li>Allow multiple files: Ticked</li>
+<li>Multiple file Delimiter: ,</li>
+<li>Select the files’ types that you want your galaxy to work on</li>
+<li>Upload an image as an Icon for Galaxy (Optional)</li>
+<li>Press the save button. In a few seconds your Galaxy instance will be added to the Application bar.</li>
+</ul>
+<p>A sample page can be seen in the following image:
+<img alt="" src="../media/images/Galaxy-config.png" /></p>
+</li>
+<li>
+<p>Launching the added Galaxy from GenomeSpace: From GenomeSpace click on the Arrow on the right side of your Galaxy application in the Application bar and select launch.</p>
+<p>Galaxy will be opened in a new window.</p>
+<p><img alt="" src="../media/images/gal-launch.png" /></p>
+<p>(Note: Your browser may block the pop-up. Allow the pop-up accordingly).</p>
+</li>
+<li>
+<p>From the opened Galaxy login and under your username go to the preferences options
+    <img alt="" src="../media/images/galaxy-set.png" /></p>
+<p>and select the Manage OpenIDs links:
+<img alt="" src="../media/images/galaxy-openid.png" /></p>
+</li>
+<li>
+<p>From the associate more OpenID select GenomeSpace and press login. GenomeSpace will be appear as link on the top as a URL.</p>
+<p><img alt="" src="../media/images/openid-set.png" /></p>
+</li>
+</ol>
+<p>From now on your Galaxy can talk to GenomeSpace under your UserName.</p>
+<h2 id="file-transfer-tofrom-galaxy">File transfer to/from Galaxy</h2>
+<p><strong>PREREQUISITE: Please make sure you have connected your Galaxy to GenomeSpace first (<a href="#galaxy">How to</a>).</strong></p>
+<ul>
+<li>
+<p><strong>Sending a file:</strong></p>
+<ul>
+<li><em>From your Galaxy instance:</em> Go to Get Data and select GenomeSpace Importer (Please make sure you are logged into GenomeSpace). You will see your GenomeSpace home page in a few seconds. Select the file you want to send to Galaxy and press the Send to Galaxy button. A new job will be created in Galaxy and when it completes, your file will be in Galaxy.</li>
+<li><em>From GenomeSpace:</em> You can also send a file into Galaxy from the GenomeSpace home page. Simply drag and drop the file into Galaxy (Please make sure you have <a href="#galaxy">connected Galaxy and GenomeSpace</a>).    </li>
+</ul>
+</li>
+<li>
+<p><strong>Receiving a file:</strong></p>
+<p>Under each file click on the store icon and choose "Send to GenomeSpace". A dialog will be opened. Choose the directory to store the file and enter the name of the file to store. If you do not provide the file name the file will be stored as “display”. By clicking the Send button the file will be sent to GenomeSpace. The dialog box will close on success.</p>
+</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script>var base_url = '../../..';</script>
+        <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../includes/media/delayed-jquery.js"></script>
+        <script src="../../../includes/media/mdx_showable.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
