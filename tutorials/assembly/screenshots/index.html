@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Data Formats Background - LSCC Documentation</title>
+	<title>Screenshots - LSCC Documentation</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -77,15 +77,15 @@
                         </li>
                     
                         <li >
-                            <a href="../../gvl_launch/gvl_launch/">Launching a Personal GVL Server</a>
-                        </li>
-                    
-                        <li >
                             <a href="../../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
                         </li>
                     
                         <li >
                             <a href="../../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../var_detect_advanced/var_detect_advanced_background/">Variant Detection Advanced</a>
                         </li>
                     
                         <li >
@@ -116,7 +116,7 @@
                             <a href="../../python_overview/python_overview/">Python Overview</a>
                         </li>
                     
-                        <li >
+                        <li class="active">
                             <a href="">Microbial de novo Assembly for Illumina Data</a>
                         </li>
                     
@@ -125,15 +125,7 @@
                         </li>
                     
                         <li >
-                            <a href="">Variant Detection Advanced</a>
-                        </li>
-                    
-                        <li class="active">
                             <a href="">Identifying proteins from mass spectrometry data</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../genomespace/genomespace/">Introduction to GenomeSpace</a>
                         </li>
                     
                     </ul>
@@ -146,7 +138,7 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+                            <a href="../assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
                         </li>
                     
                     </ul>
@@ -158,12 +150,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../background_galaxy/">
+                    <a rel="next" href="../assembly/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../background_findcountitems_workflow/">
+                    <a rel="prev" href="../assembly-background/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -177,22 +169,49 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#data-formats-and-pre-processing">Data Formats and Pre-processing</a></li>
+        <li class="main active"><a href="#figure-1-screenshot-of-fastqc-interface-in-galaxy">Figure 1: Screenshot of FastQC interface in Galaxy</a></li>
+        
+    
+        <li class="main "><a href="#figure-2-screenshot-of-fastqc-output-in-galaxy">Figure 2: Screenshot of FastQC output in Galaxy</a></li>
+        
+    
+        <li class="main "><a href="#figure-3-screenshot-of-trimmomatic-inputs-in-galaxy">Figure 3: Screenshot of Trimmomatic inputs in Galaxy</a></li>
+        
+    
+        <li class="main "><a href="#figure-4-screenshot-of-velvet-optimiser-inputs-in-galaxy">Figure 4: Screenshot of Velvet Optimiser inputs in Galaxy</a></li>
+        
+    
+        <li class="main "><a href="#figure-5-screenshot-of-assembled-contigs-a-and-contig-stats-b">Figure 5: Screenshot of assembled contigs (a) and contig stats (b)</a></li>
+        
+    
+        <li class="main "><a href="#a">a</a></li>
+        
+    
+        <li class="main "><a href="#b">b</a></li>
+        
+    
+        <li class="main "><a href="#figure-6-screenshot-of-the-output-from-the-ncbi-blast-website">Figure 6: Screenshot of the output from the NCBI Blast website</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="data-formats-and-pre-processing">Data Formats and Pre-processing</h1>
-<p>Mass Spectrometry data analysis is plagued by an overabundance of file formats.  The good news is that the Mass Spec community, including many instrument vendors have developed a standard file format for raw data, <a href="http://www.psidev.info/mzml_1_0_0%20">mzML</a>.  The bad news is that many of the old formats are still in widespread use, and most instruments don't produce it natively.  The reference implementation of the mzML standard is a software suite called <a href="http://proteowizard.sourceforge.net/">ProteoWizard</a>. ProteoWizard includes a very handy tool called <code>msconvert</code> that is capable of converting raw data from most instruments into <code>mzML</code> or into one of many other formats.  In addition to format conversion, <code>msconvert</code> can also perform a wide variety of noise filtering and peak-picking functions to prepare data for analysis.  A typical pre-processing involves;</p>
-<ol>
-<li>Conversion from instrument .raw to mzML</li>
-<li>Peak picking on both MS1 and MS2 data using vendor-native peak picking routines (built in to msconvert)</li>
-<li>Denoising of MS2 data either by thresholding or by keeping only the largest peaks withing a moving window</li>
-<li>Convert spectrum identifiers into a standardized format</li>
-</ol>
-<p>To convert files from raw instrument native formats to <code>mzML</code> a windows PC is required.  If you need to do this, be sure to download <a href="http://proteowizard.sourceforge.net/">ProteoWizard</a> with <em>vendor reader support</em> .  This package comes with <code>MSConvertGUI</code> which allows conversion of raw files using a graphical interface.  Once files are in <code>mzML</code> or <code>mgf</code> format they can be converted to various other formats using the <code>msconvert3</code> tool in Galaxy.</p></div>
+<h3 id="figure-1-screenshot-of-fastqc-interface-in-galaxy">Figure 1: Screenshot of FastQC interface in Galaxy</h3>
+<p><img src="../media/screenshot-fastqc-interface.png" width=100% /></p>
+<h3 id="figure-2-screenshot-of-fastqc-output-in-galaxy">Figure 2: Screenshot of FastQC output in Galaxy</h3>
+<p><img src="../media/screenshot-fastqc-output.png" width=100% /></p>
+<h3 id="figure-3-screenshot-of-trimmomatic-inputs-in-galaxy">Figure 3: Screenshot of Trimmomatic inputs in Galaxy</h3>
+<p><img src="../media/screenshot-trimmomatic-inputs.png" width=100% /></p>
+<h3 id="figure-4-screenshot-of-velvet-optimiser-inputs-in-galaxy">Figure 4: Screenshot of Velvet Optimiser inputs in Galaxy</h3>
+<p><img src="../media/screenshot-velvetoptimiser-inputs.png" width=100% /></p>
+<h3 id="figure-5-screenshot-of-assembled-contigs-a-and-contig-stats-b">Figure 5: Screenshot of assembled contigs (a) and contig stats (b)</h3>
+<h3 id="a">a</h3>
+<p><img src="../media/screenshot-contigs.png" width=100% /></p>
+<h3 id="b">b</h3>
+<p><img src="../media/screenshot-contig-stats.png" width=100% /></p>
+<h3 id="figure-6-screenshot-of-the-output-from-the-ncbi-blast-website">Figure 6: Screenshot of the output from the NCBI Blast website</h3>
+<p><img src="../media/screenshot-blast.png" width=100% /></p></div>
         </div>
 
         <footer class="col-md-12">
