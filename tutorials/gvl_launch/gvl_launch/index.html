@@ -193,8 +193,6 @@
         
             <li><a href="#section-5-gvl-services">Section 5: GVL services</a></li>
         
-            <li><a href="#section-6-useful-things-to-know-when-using-your-vm">Section 6: Useful things to know when using your VM</a></li>
-        
             <li><a href="#section-6-shutting-your-machine-down">Section 6: Shutting your machine down</a></li>
         
     
@@ -249,7 +247,7 @@ using your default NeCTAR allocation.</p>
 <li>Accessing the NeCTAR dashboard using Australian Access Federation (AAF)
    credentials</li>
 <li>Getting your NeCTAR Research Cloud credentials</li>
-<li>Launching your GVL instance</li>
+<li>Launching the GVL image</li>
 <li>Accessing your GVL instance</li>
 <li>GVL services</li>
 <li>Shutting your machine down</li>
@@ -259,50 +257,6 @@ using your default NeCTAR allocation.</p>
 <h4 id="what-is-the-gvl">What is the GVL?</h4>
 <p>The Genomics Virtual Laboratory (GVL) is a research platform that can be
 deployed on the cloud.</p>
-<div class="showable-container hint showable-hidden" id="showable0">
-<div class="showable-inner">
-<div class="showable-header hint" id="showabletitle0"><a href="" id="showablelink0">Defining some cloud computing terms.</a>
-<strong>What is cloud computing?</strong><br />
-Cloud computing describes computing power that is 'outsourced' to someone else's
-infrastructure over the internet. In the framework of this tutorial, you will be
-starting up a virtual machine which will be used to run scientific analyses. The
-physical machine that will do the computational work will be located in a data
-centre somewhere in Australia. We will call this machine a remote server. You
-will be able to send commands to your server from your local computer over the
-internet.</div>
-<div class="showable-body hint" id="showablebody0">
-<p><strong>What is a virtual machine?</strong><br />
-Virtual machines (VMs) allow a physical machine to run multiple operating
-systems. This means that multiple users can launch machines on the same physical
-machine without interfering with another. When you launch a 2 core VM in
-this tutorial, you will likely be sharing the physical computer infrastructure
-with other users but your virtual machines will not interact so you can pretend
-your virtual machine is just a computer sitting in a remote location. Often,
-the terms 'virtual machine', 'machine', and 'instance' are used interchangeably.</p>
-<p><strong>What is an image?</strong><br />
-An image is a static snapshot of a virtual machine which contains the operating
-system and any files that were on the VM when the snapshot was taken. By
-launching a machine from the GVL image, platforms such as Galaxy and JupyterHub
-are immediately available after launch.</p>
-<p><strong>What is an instance?</strong><br />
-An instance is a running copy of an image. When you launch your VM in this
-tutorial, you are first copying the GVL image to your personal VM. This means
-that your instance is your own personal copy of the GVL platform which you can
-use however you wish. If you accidentally break something, it's a simple
-process to terminate your instance and launch a new one from scratch using the
-image.</p>
-</div>
-</div>
-</div>
-<script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
-<script>
-    $(document).ready(function(){
-        $("#showablelink0").click(function(e){
-            e.preventDefault();
-            $("#showable0").toggleClass("showable-hidden");
-        });
-    });
-    </script>
 <p><img src="../media/gvl_dashboard.png" height=500px style="display:block; margin-left: auto; margin-right:auto;"></p>
 <p>A private GVL server is a virtual machine running on the cloud and contains a
 pre-installed suite of tools for performing bioinformatics analyses. It differs
@@ -451,11 +405,9 @@ browser's URL navigation bar.</p>
 <li>
 <p>Explore the GVL dashboard.
     Have a read through of the services provided by the GVL.</p>
-<p><img src="../media/gvl_dashboard.png" height=500px style="display:block; margin-left: auto; margin-right:auto;"></p>
-<p>The rightmost column labelled 'Access Link' details how to access each
-service.</p>
 </li>
 </ol>
+<p><img src="../media/gvl_dashboard.png" height=500px style="display:block; margin-left: auto; margin-right:auto;"></p>
 <hr />
 <h2 id="section-5-gvl-services">Section 5: GVL services</h2>
 <p>Listed below are short descriptions of the services the GVL provides.</p>
@@ -482,9 +434,8 @@ access the GVL command line utilities through the desktop.</p>
 password.</p>
 <p><img src="../media/lubuntu.png" height=350px style="display:block; margin-left: auto; margin-right:auto;"></p>
 <h4 id="ssh">SSH</h4>
-<p>Secure Shell (SSH) is a network protocol that allows us to connect to a remote
-machine. You can login to your virtual machine remotely (i.e. from your own
-computer) by using an SSH client or a terminal.</p>
+<p>Secure Shell (SSH) is a network protocol that allows us to connect to a remotely
+machine. You can login to your virtual machine remotely through an SSH client.</p>
 <p>If you are using Windows, you will need to download an SSH client such as
 <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>. If you are using
 OSX, open up a Terminal window.</p>
@@ -524,32 +475,29 @@ password.</p>
 <h4 id="public-html">Public HTML</h4>
 <p>This is a shared web-accessible folder. Any files you place in the directory
 <code>/home/researcher/public_html</code> will be publicly accessible.</p>
-<hr />
-<h2 id="section-6-useful-things-to-know-when-using-your-vm">Section 6: Useful things to know when using your VM</h2>
-<pre><code>### WIP
-transient storage vs primary on-disk storage
-https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage
-
-transferring data to your VM
- - scp
- - cyberduck sftp
-
-running jobs
- - screen
-
-how to add a new user
-ubuntu@server-8a8ee819-e027-4fb8-98d4-d4c68ec7ce9a:/opt/gvl/gvl_commandline_utilities$ sudo sh setup_user.sh gvhd
-
-
-
-
-</code></pre>
-
+<h4 id="pacbio-smrt-portal">PacBio SMRT Portal</h4>
+<p><a href="http://www.pacb.com/products-and-services/analytical-software/smrt-analysis/">PacBio's SMRT Portal</a> is an open source software suite for the analysis of single molecule, real-time sequencing data.</p>
+<p>Before you use SMRT Portal, you need to firstly install it through the Admin console. <em>Please note PacBio recommends the use of a 16 core instance with 64GB of RAM (or higher) for this package.</em></p>
+<p>To install SMRT Portal from the GVL dashboard:</p>
+<ul>
+<li>
+<p>Click on 'Admin' in the top navigation bar.</p>
+</li>
+<li>
+<p>Log in with the username 'ubuntu' and your cluster password. The screen will now show all the tools available to be installed.</p>
+</li>
+<li>
+<p>Scroll down to 'SMRT Analysis', and click 'install'.</p>
+</li>
+<li>
+<p>The install is complete when SMRT Portal is available as a tool on the GVL dashboard, and a green tick is displayed.</p>
+</li>
+</ul>
+<p>When launching SMRT Portal for the first time, you will need to register yourself as a new user.</p>
 <hr />
 <h2 id="section-6-shutting-your-machine-down">Section 6: Shutting your machine down</h2>
-<p>When you've decided that you no longer need your instance, there are two ways
-to terminate it. Terminating your instance is permanent and all data will be
-deleted (unless you have persistent
+<p>There are two ways to terminate your instance. Terminating your instance is
+permanent and all data will be deleted (unless you have persistent
 <a href="https://support.rc.nectar.org.au/docs/volumes">volume storage</a> which you will
 need to apply for).</p>
 <ol>
@@ -565,9 +513,7 @@ need to apply for).</p>
     the instance you want to terminate, and on the right-most column (Actions),
     click on the arrow button, and select <strong>Terminate Instance</strong>.</p>
 </li>
-</ol>
-<p>It is recommended to terminate instances when you no longer need them to free
-up resources for other users.</p></div>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
