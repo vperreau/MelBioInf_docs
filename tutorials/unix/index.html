@@ -8,25 +8,25 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-
-	<title>Introduction to Unix - LSCC Documentation</title>
-
+        <title>Introduction to Unix - Bioinformatics Documentation</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../extra.css" rel="stylesheet">
         <link href="../../includes/media/mdx_showable.css" rel="stylesheet">
         <link href="../../includes/media/mdx_showable_user.css" rel="stylesheet">
         <link href="../../includes/media/slides.css" rel="stylesheet">
         <link href="../../includes/media/tute.css" rel="stylesheet">
-
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-
-        
+	
+	<script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
     </head>
 
     <body>
@@ -43,160 +43,193 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <!-- Main title -->
-            <a class="navbar-brand" href="../..">LSCC Documentation</a>
+            <a class="navbar-brand" href="../..">Bioinformatics Documentation</a>
         </div>
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
-            <!-- Main navigation -->
-            <ul class="nav navbar-nav">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../">Overview</a>
+</li>
+                            
+<li >
+    <a href="../ngs_overview/NGS_Overview/">NGS Overview</a>
+</li>
+                            
+<li >
+    <a href="../using_git/Using_Git/">Using Git and Github for revision control</a>
+</li>
+                            
+<li >
+    <a href="../gvl_launch/gvl_launch/">Launching a Personal GVL Server</a>
+</li>
+                            
+<li >
+    <a href="../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
+</li>
+                            
+<li >
+    <a href="../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
+</li>
+                            
+<li >
+    <a href="../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
+</li>
+                            
+<li >
+    <a href="../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
+</li>
+                            
+<li >
+    <a href="../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
+</li>
+                            
+<li >
+    <a href="../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
+</li>
+                            
+<li >
+    <a href="../hpc/">Introduction to HPC</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Introduction to Unix</a>
+</li>
+                            
+<li >
+    <a href="../python_overview/python_overview/">Python Overview</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Microbial de novo Assembly for Illumina Data</a>
+    <ul class="dropdown-menu">
             
+<li >
+    <a href="../assembly/assembly/">Tutorial</a>
+</li>
             
-                <li >
-                    <a href="../..">Home</a>
-                </li>
+<li >
+    <a href="../assembly/assembly-background/">Method Background</a>
+</li>
+    </ul>
+  </li>
+                            
+<li >
+    <a href="../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Variant Detection Advanced</a>
+    <ul class="dropdown-menu">
             
+<li >
+    <a href="../var_detect_advanced/var_detect_advanced/">Var detect advanced</a>
+</li>
             
+<li >
+    <a href="../var_detect_advanced/var_detect_advanced_background/">Var detect advanced background</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Identifying proteins from mass spectrometry data</a>
+    <ul class="dropdown-menu">
             
-                <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
-                        <li >
-                            <a href="../">Overview</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../ngs_overview/NGS_Overview/">NGS Overview</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../using_git/Using_Git/">Using Git and Github for revision control</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../gvl_launch/gvl_launch/">Launching a Personal GVL Server</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../hpc/">Introduction to HPC</a>
-                        </li>
-                    
-                        <li class="active">
-                            <a href="./">Introduction to Unix</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../python_overview/python_overview/">Python Overview</a>
-                        </li>
-                    
-                        <li >
-                            <a href="">Microbial de novo Assembly for Illumina Data</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
-                        </li>
-                    
-                        <li >
-                            <a href="">Variant Detection Advanced</a>
-                        </li>
-                    
-                        <li >
-                            <a href="">Identifying proteins from mass spectrometry data</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../genomespace/genomespace/">Introduction to GenomeSpace</a>
-                        </li>
-                    
-                    </ul>
-                </li>
+<li >
+    <a href="../proteomics_basic/proteomics_basic/">Tutorial</a>
+</li>
             
+<li >
+    <a href="../proteomics_basic/background_galaxy/">Galaxy Background</a>
+</li>
             
+<li >
+    <a href="../proteomics_basic/background_data_formats/">Data Formats Background</a>
+</li>
             
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
-                        <li >
-                            <a href="../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
-                        </li>
-                    
-                    </ul>
-                </li>
+<li >
+    <a href="../proteomics_basic/background_findcountitems_workflow/">Create find count items workflow</a>
+</li>
             
+<li >
+    <a href="../proteomics_basic/background_protein_databases/">Protein Databases</a>
+</li>
             
-            </ul>
+<li >
+    <a href="../proteomics_basic/background_search_engines/">Search Engines</a>
+</li>
+            
+<li >
+    <a href="../proteomics_basic/background_protein_prophet/">Protein Prophet</a>
+</li>
+            
+<li >
+    <a href="../alignment/alignment/">Alignment Tutorial</a>
+</li>
+    </ul>
+  </li>
+                            
+<li >
+    <a href="../genomespace/genomespace/">Introduction to GenomeSpace</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
 
-            <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
-                <li >
-                    <a rel="next" href="../hpc/">
-                        <i class="fa fa-arrow-left"></i> Previous
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="../python_overview/python_overview/">
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </li>
-                
+                    <li >
+                        <a rel="next" href="../hpc/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../python_overview/python_overview/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
 </div>
 
         <div class="container">
-            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-    
         <li class="main active"><a href="#introduction-to-unix">Introduction to Unix</a></li>
-        
             <li><a href="#how-to-use-this-workshop">How to use this workshop</a></li>
-        
             <li><a href="#topic-1-remote-log-in">Topic 1: Remote log in</a></li>
-        
             <li><a href="#topic-2-exploring-your-home-directory">Topic 2: Exploring your home directory</a></li>
-        
             <li><a href="#topic-3-exploring-the-file-system">Topic 3: Exploring the file system</a></li>
-        
             <li><a href="#topic-4-working-with-files-and-directories">Topic 4: Working with files and directories</a></li>
-        
             <li><a href="#topic-5-pipes-output-redirection-and-shell-scripts">Topic 5: Pipes, output redirection and shell scripts</a></li>
-        
             <li><a href="#finished">Finished</a></li>
-        
-    
     </ul>
 </div></div>
-            <div class="col-md-9" role="main">
+                <div class="col-md-9" role="main">
 
 <style src="../../includes/media/tute.css" ></style>
 
@@ -216,7 +249,9 @@ sometimes a <em>hint</em> (or two) and finishes with the suggested <em>answer</e
 <div class="showable-header question" id="showabletitle0"><span class="link-like" id="showablelink0">What is the Answer to Life?</span></div>
 </div>
 </div>
-<script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+<script>//<![CDATA[<!--
+(function(w,d,u){if(!w.$){w._delayed=true;console.info("Delaying JQuery calls");w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}}})(window,document)
+//-->]]></script>
 <h3 id="hint">Hint</h3>
 <p>Depending on how much of a challenge you like, you may choose to use hints.  Even if you work out the answer without hints, its a good 
 idea to read the hints afterwards because they contain extra information that is good to know.</p>
@@ -236,6 +271,7 @@ idea to read the hints afterwards because they contain extra information that is
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink2").click(function(e){
             e.preventDefault();
@@ -246,18 +282,19 @@ idea to read the hints afterwards because they contain extra information that is
                 $("#showablelink2").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink1").click(function(e){
             e.preventDefault();
             $("#showable1").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h3 id="answer">Answer</h3>
 <p>Once you have worked out the answer to the question expand the Answer section to check if you got it correct.</p>
@@ -271,12 +308,13 @@ idea to read the hints afterwards because they contain extra information that is
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink3").click(function(e){
             e.preventDefault();
             $("#showable3").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h3 id="usage-style">Usage Style</h3>
 <p>This workshop attempts to cater for two usage styles:</p>
@@ -335,12 +373,13 @@ Unix commands and thus begin using the remote computer.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink4").click(function(e){
             e.preventDefault();
             $("#showable4").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container indent showable-hidden" id="showable5">
 <div class="showable-inner">
@@ -369,12 +408,13 @@ the remote computer.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink5").click(function(e){
             e.preventDefault();
             $("#showable5").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <p><strong>Note</strong>: for security reasons ssh will not display any characters when you enter your password. This 
 can be confusing because it appears as if your typing is not recognised by the computer. Don’t be 
@@ -403,12 +443,13 @@ hostname
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink6").click(function(e){
             e.preventDefault();
             $("#showable6").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable7">
 <div class="showable-inner">
@@ -427,12 +468,13 @@ the current month.</li>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink7").click(function(e){
             e.preventDefault();
             $("#showable7").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="topic-2-exploring-your-home-directory">Topic 2: Exploring your home directory</h2>
 <p>In this topic we will learn how to "look" at the filesystem and further expand our repertoire of Unix commands. </p>
@@ -454,12 +496,13 @@ to your <em>home</em> directory when you log into a Unix computer.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink9").click(function(e){
             e.preventDefault();
             $("#showable9").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable10">
 <div class="showable-inner">
@@ -476,12 +519,13 @@ where you start when you first login is your <em>HOME</em> directory.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink10").click(function(e){
             e.preventDefault();
             $("#showable10").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <p>The above answer is not quite correct.  There are a number of <em>hidden</em> files in your home directory as well.</p>
@@ -504,6 +548,7 @@ where you start when you first login is your <em>HOME</em> directory.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink13").click(function(e){
             e.preventDefault();
@@ -514,18 +559,19 @@ where you start when you first login is your <em>HOME</em> directory.</p>
                 $("#showablelink13").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink12").click(function(e){
             e.preventDefault();
             $("#showable12").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable14">
 <div class="showable-inner">
@@ -548,12 +594,13 @@ for the current directory and <em>..</em> a shortcut for the directory above the
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink14").click(function(e){
             e.preventDefault();
             $("#showable14").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable15">
@@ -575,6 +622,7 @@ for the current directory and <em>..</em> a shortcut for the directory above the
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink17").click(function(e){
             e.preventDefault();
@@ -585,18 +633,19 @@ for the current directory and <em>..</em> a shortcut for the directory above the
                 $("#showablelink17").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink16").click(function(e){
             e.preventDefault();
             $("#showable16").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable18">
 <div class="showable-inner">
@@ -619,12 +668,13 @@ You can also find out the name of your home directory by printing the value of t
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink18").click(function(e){
             e.preventDefault();
             $("#showable18").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable19">
@@ -641,12 +691,13 @@ You can also find out the name of your home directory by printing the value of t
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink20").click(function(e){
             e.preventDefault();
             $("#showable20").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable21">
 <div class="showable-inner">
@@ -689,12 +740,13 @@ permission |  username   group   size    date       name
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink21").click(function(e){
             e.preventDefault();
             $("#showable21").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable22">
@@ -711,12 +763,13 @@ permission |  username   group   size    date       name
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink23").click(function(e){
             e.preventDefault();
             $("#showable23").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable24">
 <div class="showable-inner">
@@ -731,12 +784,13 @@ permission |  username   group   size    date       name
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink24").click(function(e){
             e.preventDefault();
             $("#showable24").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable25">
@@ -759,6 +813,7 @@ the slides)</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink27").click(function(e){
             e.preventDefault();
@@ -769,18 +824,19 @@ the slides)</p>
                 $("#showablelink27").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink26").click(function(e){
             e.preventDefault();
             $("#showable26").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable28">
 <div class="showable-inner">
@@ -838,12 +894,13 @@ directory. The <em>---</em> means that nobody else (other users on the system) c
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink28").click(function(e){
             e.preventDefault();
             $("#showable28").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="info">
@@ -878,6 +935,7 @@ occurance of <em>hello</em> etc.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink31").click(function(e){
             e.preventDefault();
@@ -888,18 +946,19 @@ occurance of <em>hello</em> etc.</p>
                 $("#showablelink31").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink30").click(function(e){
             e.preventDefault();
             $("#showable30").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable32">
 <div class="showable-inner">
@@ -918,12 +977,13 @@ occurance of <em>hello</em> etc.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink32").click(function(e){
             e.preventDefault();
             $("#showable32").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable33">
@@ -945,6 +1005,7 @@ occurance of <em>hello</em> etc.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink35").click(function(e){
             e.preventDefault();
@@ -955,18 +1016,19 @@ occurance of <em>hello</em> etc.</p>
                 $("#showablelink35").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink34").click(function(e){
             e.preventDefault();
             $("#showable34").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable36">
 <div class="showable-inner">
@@ -982,12 +1044,13 @@ occurance of <em>hello</em> etc.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink36").click(function(e){
             e.preventDefault();
             $("#showable36").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="topic-3-exploring-the-file-system">Topic 3: Exploring the file system</h2>
 <p>In this topic we will learn how to move around the filesystem and see what is there.</p>
@@ -1011,12 +1074,13 @@ occurance of <em>hello</em> etc.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink38").click(function(e){
             e.preventDefault();
             $("#showable38").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable39">
@@ -1034,12 +1098,13 @@ slash).</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink40").click(function(e){
             e.preventDefault();
             $("#showable40").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable41">
 <div class="showable-inner">
@@ -1059,12 +1124,13 @@ other than your current working directory.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink41").click(function(e){
             e.preventDefault();
             $("#showable41").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable42">
@@ -1082,12 +1148,13 @@ change?</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink43").click(function(e){
             e.preventDefault();
             $("#showable43").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable44">
 <div class="showable-inner">
@@ -1106,12 +1173,13 @@ So people often say "move to", "go to" or "charge directory to" when they want t
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink44").click(function(e){
             e.preventDefault();
             $("#showable44").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="info">
@@ -1134,12 +1202,13 @@ such command.  However, it will get grumpy if something went wrong by way of an 
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink46").click(function(e){
             e.preventDefault();
             $("#showable46").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable47">
 <div class="showable-inner">
@@ -1161,12 +1230,13 @@ dev                  lost+found  proc     sys
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink47").click(function(e){
             e.preventDefault();
             $("#showable47").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable48">
@@ -1190,6 +1260,7 @@ is buried in <em>man cd</em> however <em>cd</em> doesn't its own manpage so you 
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink50").click(function(e){
             e.preventDefault();
@@ -1200,18 +1271,19 @@ is buried in <em>man cd</em> however <em>cd</em> doesn't its own manpage so you 
                 $("#showablelink50").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink49").click(function(e){
             e.preventDefault();
             $("#showable49").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable51">
 <div class="showable-inner">
@@ -1237,12 +1309,13 @@ no arguments:</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink51").click(function(e){
             e.preventDefault();
             $("#showable51").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable52">
@@ -1261,12 +1334,13 @@ no arguments:</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink53").click(function(e){
             e.preventDefault();
             $("#showable53").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable54">
@@ -1283,12 +1357,13 @@ no arguments:</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink55").click(function(e){
             e.preventDefault();
             $("#showable55").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable56">
 <div class="showable-inner">
@@ -1304,12 +1379,13 @@ expectations.txt  hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink56").click(function(e){
             e.preventDefault();
             $("#showable56").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable57">
@@ -1331,6 +1407,7 @@ expectations.txt  hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink59").click(function(e){
             e.preventDefault();
@@ -1341,18 +1418,19 @@ expectations.txt  hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
                 $("#showablelink59").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink58").click(function(e){
             e.preventDefault();
             $("#showable58").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable60">
 <div class="showable-inner">
@@ -1381,12 +1459,13 @@ then read the Unix manual page like so:</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink60").click(function(e){
             e.preventDefault();
             $("#showable60").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable61">
@@ -1403,12 +1482,13 @@ then read the Unix manual page like so:</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink62").click(function(e){
             e.preventDefault();
             $("#showable62").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable63">
 <div class="showable-inner">
@@ -1427,12 +1507,13 @@ program (raw instructions that the computer can execute directly).</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink63").click(function(e){
             e.preventDefault();
             $("#showable63").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable64">
@@ -1450,12 +1531,13 @@ What do they mean?</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink65").click(function(e){
             e.preventDefault();
             $("#showable65").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable66">
 <div class="showable-inner">
@@ -1477,12 +1559,13 @@ future reference: links are created with the <em>ln</em> command.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink66").click(function(e){
             e.preventDefault();
             $("#showable66").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable67">
@@ -1499,12 +1582,13 @@ future reference: links are created with the <em>ln</em> command.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink68").click(function(e){
             e.preventDefault();
             $("#showable68").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable69">
 <div class="showable-inner">
@@ -1518,12 +1602,13 @@ future reference: links are created with the <em>ln</em> command.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink69").click(function(e){
             e.preventDefault();
             $("#showable69").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="topic-4-working-with-files-and-directories">Topic 4: Working with files and directories</h2>
 <p>In this topic we will start to read, create, edit and delete files and directories.</p>
@@ -1554,6 +1639,7 @@ command find out what they do, in particular the NAME, SYNOPSIS and DESCRIPTION 
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink72").click(function(e){
             e.preventDefault();
@@ -1564,18 +1650,19 @@ command find out what they do, in particular the NAME, SYNOPSIS and DESCRIPTION 
                 $("#showablelink72").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink71").click(function(e){
             e.preventDefault();
             $("#showable71").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable73">
 <div class="showable-inner">
@@ -1595,12 +1682,13 @@ exp01  file01  muscle.fq  test
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink73").click(function(e){
             e.preventDefault();
             $("#showable73").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable74">
@@ -1632,6 +1720,7 @@ DESCRIPTION
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink76").click(function(e){
             e.preventDefault();
@@ -1642,18 +1731,19 @@ DESCRIPTION
                 $("#showablelink76").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink75").click(function(e){
             e.preventDefault();
             $("#showable75").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable77">
 <div class="showable-inner">
@@ -1687,12 +1777,13 @@ cp * ~/test
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink77").click(function(e){
             e.preventDefault();
             $("#showable77").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <p><strong>Note</strong>: This exercise assumes that the copy command from the previous exercise was successful. </p>
@@ -1716,6 +1807,7 @@ it from and the directory that you copied it to.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink80").click(function(e){
             e.preventDefault();
@@ -1726,18 +1818,19 @@ it from and the directory that you copied it to.</span></div>
                 $("#showablelink80").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink79").click(function(e){
             e.preventDefault();
             $("#showable79").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable81">
 <div class="showable-inner">
@@ -1766,12 +1859,13 @@ etcetera.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink81").click(function(e){
             e.preventDefault();
             $("#showable81").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <p><strong>Note</strong>: this exercise assumes your working directory is <em>~/test</em>; if not run <em>cd ~/test</em></p>
@@ -1795,6 +1889,7 @@ it from and the directory that you copied it to.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink84").click(function(e){
             e.preventDefault();
@@ -1805,18 +1900,19 @@ it from and the directory that you copied it to.</span></div>
                 $("#showablelink84").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink83").click(function(e){
             e.preventDefault();
             $("#showable83").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable85">
 <div class="showable-inner">
@@ -1832,12 +1928,13 @@ it from and the directory that you copied it to.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink85").click(function(e){
             e.preventDefault();
             $("#showable85").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable86">
@@ -1859,6 +1956,7 @@ it from and the directory that you copied it to.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink88").click(function(e){
             e.preventDefault();
@@ -1869,18 +1967,19 @@ it from and the directory that you copied it to.</span></div>
                 $("#showablelink88").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink87").click(function(e){
             e.preventDefault();
             $("#showable87").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable89">
 <div class="showable-inner">
@@ -1905,12 +2004,13 @@ $ wc -c expectations.txt
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink89").click(function(e){
             e.preventDefault();
             $("#showable89").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable90">
@@ -1936,6 +2036,7 @@ the lower-case letter that follows the <em>^</em> character.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink92").click(function(e){
             e.preventDefault();
@@ -1946,18 +2047,19 @@ the lower-case letter that follows the <em>^</em> character.</p>
                 $("#showablelink92").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink91").click(function(e){
             e.preventDefault();
             $("#showable91").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable93">
 <div class="showable-inner">
@@ -1970,12 +2072,13 @@ editors exist such as <em>vim</em> and <em>emacs</em>, however they take a subst
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink93").click(function(e){
             e.preventDefault();
             $("#showable93").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable94">
@@ -1999,6 +2102,7 @@ same or different in their contents?</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink96").click(function(e){
             e.preventDefault();
@@ -2009,18 +2113,19 @@ same or different in their contents?</span></div>
                 $("#showablelink96").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink95").click(function(e){
             e.preventDefault();
             $("#showable95").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable97">
 <div class="showable-inner">
@@ -2037,12 +2142,13 @@ same or different in their contents?</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink97").click(function(e){
             e.preventDefault();
             $("#showable97").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable98">
@@ -2065,6 +2171,7 @@ same or different in their contents?</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink100").click(function(e){
             e.preventDefault();
@@ -2075,18 +2182,19 @@ same or different in their contents?</span></div>
                 $("#showablelink100").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink99").click(function(e){
             e.preventDefault();
             $("#showable99").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable101">
 <div class="showable-inner">
@@ -2102,12 +2210,13 @@ foo.txt  hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink101").click(function(e){
             e.preventDefault();
             $("#showable101").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable102">
@@ -2130,12 +2239,13 @@ expectations.txt  hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink103").click(function(e){
             e.preventDefault();
             $("#showable103").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable104">
@@ -2157,6 +2267,7 @@ expectations.txt  hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink106").click(function(e){
             e.preventDefault();
@@ -2167,18 +2278,19 @@ expectations.txt  hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
                 $("#showablelink106").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink105").click(function(e){
             e.preventDefault();
             $("#showable105").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable107">
 <div class="showable-inner">
@@ -2194,12 +2306,13 @@ hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink107").click(function(e){
             e.preventDefault();
             $("#showable107").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable108">
@@ -2221,6 +2334,7 @@ hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink110").click(function(e){
             e.preventDefault();
@@ -2231,18 +2345,19 @@ hello.c  hi  jude.txt  moby.txt  sample_1.fastq  sleepy
                 $("#showablelink110").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink109").click(function(e){
             e.preventDefault();
             $("#showable109").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable111">
 <div class="showable-inner">
@@ -2272,12 +2387,13 @@ in the wrong location! Now is a good moment to pause and think about file backup
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink111").click(function(e){
             e.preventDefault();
             $("#showable111").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable112">
@@ -2295,12 +2411,13 @@ in the wrong location! Now is a good moment to pause and think about file backup
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink113").click(function(e){
             e.preventDefault();
             $("#showable113").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable114">
 <div class="showable-inner">
@@ -2316,12 +2433,13 @@ $ cp /home/group/common/training/Intro_to_Unix/* test
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink114").click(function(e){
             e.preventDefault();
             $("#showable114").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable115">
@@ -2339,12 +2457,13 @@ of the file <em>hello.c</em></span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink116").click(function(e){
             e.preventDefault();
             $("#showable116").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable117">
 <div class="showable-inner">
@@ -2369,12 +2488,13 @@ Hello World
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink117").click(function(e){
             e.preventDefault();
             $("#showable117").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable118">
@@ -2396,6 +2516,7 @@ Hello World
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink120").click(function(e){
             e.preventDefault();
@@ -2406,18 +2527,19 @@ Hello World
                 $("#showablelink120").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink119").click(function(e){
             e.preventDefault();
             $("#showable119").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable121">
 <div class="showable-inner">
@@ -2450,12 +2572,13 @@ abaabaa`aaaaaaa^ba_]]aaa^aaaaa_^][aa
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink121").click(function(e){
             e.preventDefault();
             $("#showable121").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable122">
@@ -2472,12 +2595,13 @@ abaabaa`aaaaaaa^ba_]]aaa^aaaaa_^][aa
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink123").click(function(e){
             e.preventDefault();
             $("#showable123").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable124">
 <div class="showable-inner">
@@ -2498,12 +2622,13 @@ CTGATGCCGAGGCACGCCGTTAGGCGCGTGCTGCAG
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink124").click(function(e){
             e.preventDefault();
             $("#showable124").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable125">
@@ -2532,6 +2657,7 @@ SYNOPSIS
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink127").click(function(e){
             e.preventDefault();
@@ -2542,18 +2668,19 @@ SYNOPSIS
                 $("#showablelink127").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink126").click(function(e){
             e.preventDefault();
             $("#showable126").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable128">
 <div class="showable-inner">
@@ -2577,12 +2704,13 @@ into the <em>wc -l</em> command:</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink128").click(function(e){
             e.preventDefault();
             $("#showable128").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable129">
@@ -2612,6 +2740,7 @@ word "the" with a case insensitive search (it should count "the" "The" "THE" "tH
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink131").click(function(e){
             e.preventDefault();
@@ -2622,18 +2751,19 @@ word "the" with a case insensitive search (it should count "the" "The" "THE" "tH
                 $("#showablelink131").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink130").click(function(e){
             e.preventDefault();
             $("#showable130").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable132">
 <div class="showable-inner">
@@ -2657,12 +2787,13 @@ re-use it under the terms of the Project Gutenberg License included
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink132").click(function(e){
             e.preventDefault();
             $("#showable132").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable133">
@@ -2680,12 +2811,13 @@ back to the original contents.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink134").click(function(e){
             e.preventDefault();
             $("#showable134").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable135">
 <div class="showable-inner">
@@ -2718,12 +2850,13 @@ do then they wont do anything.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink135").click(function(e){
             e.preventDefault();
             $("#showable135").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="topic-5-pipes-output-redirection-and-shell-scripts">Topic 5: Pipes, output redirection and shell scripts</h2>
 <p>In this section we will cover a lot of the more advanced Unix concepts; it is here where you will start to see
@@ -2749,6 +2882,7 @@ the power of Unix.  I say <em>start</em> because this is only the "tip of the ic
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink138").click(function(e){
             e.preventDefault();
@@ -2759,18 +2893,19 @@ the power of Unix.  I say <em>start</em> because this is only the "tip of the ic
                 $("#showablelink138").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink137").click(function(e){
             e.preventDefault();
             $("#showable137").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable139">
 <div class="showable-inner">
@@ -2799,12 +2934,13 @@ programming language (such as Python etcetera).</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink139").click(function(e){
             e.preventDefault();
             $("#showable139").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable140">
@@ -2821,12 +2957,13 @@ programming language (such as Python etcetera).</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink141").click(function(e){
             e.preventDefault();
             $("#showable141").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable142">
 <div class="showable-inner">
@@ -2844,12 +2981,13 @@ the <em>-i</em> (ignore case option for grep).</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink142").click(function(e){
             e.preventDefault();
             $("#showable142").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable143">
@@ -2871,6 +3009,7 @@ the <em>-i</em> (ignore case option for grep).</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink145").click(function(e){
             e.preventDefault();
@@ -2881,18 +3020,19 @@ the <em>-i</em> (ignore case option for grep).</p>
                 $("#showablelink145").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink144").click(function(e){
             e.preventDefault();
             $("#showable144").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable146">
 <div class="showable-inner">
@@ -2939,12 +3079,13 @@ in the numbered lines:</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink146").click(function(e){
             e.preventDefault();
             $("#showable146").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable147">
@@ -2962,12 +3103,13 @@ number at the beginning.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink148").click(function(e){
             e.preventDefault();
             $("#showable148").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable149">
 <div class="showable-inner">
@@ -2992,12 +3134,13 @@ If you get tired of looking at the output you can kill the command with <em>cont
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink149").click(function(e){
             e.preventDefault();
             $("#showable149").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable150">
@@ -3019,12 +3162,13 @@ interactively view the contents of <em>sample_1.fastq.nl</em> (use the arrow key
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink151").click(function(e){
             e.preventDefault();
             $("#showable151").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable152">
 <div class="showable-inner">
@@ -3061,12 +3205,13 @@ that the <em>less</em> command is used by default to display man pages.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink152").click(function(e){
             e.preventDefault();
             $("#showable152").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question" id="showable153">
@@ -3083,12 +3228,13 @@ sample_1.fastq.nl into TSV format:</a></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink153").click(function(e){
             e.preventDefault();
             $("#showable153").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable154">
 <div class="showable-inner">
@@ -3104,12 +3250,13 @@ which causes it to join consecutive groups of 4 lines from the file into one lin
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink154").click(function(e){
             e.preventDefault();
             $("#showable154").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question" id="showable155">
@@ -3124,12 +3271,13 @@ which causes it to join consecutive groups of 4 lines from the file into one lin
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink155").click(function(e){
             e.preventDefault();
             $("#showable155").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container hint showable-hidden" id="showable156">
 <div class="showable-inner">
@@ -3140,12 +3288,13 @@ which causes it to join consecutive groups of 4 lines from the file into one lin
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink156").click(function(e){
             e.preventDefault();
             $("#showable156").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable157">
 <div class="showable-inner">
@@ -3160,12 +3309,13 @@ side point.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink157").click(function(e){
             e.preventDefault();
             $("#showable157").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable158">
@@ -3183,12 +3333,13 @@ the first <em>20</em> lines of the file.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink159").click(function(e){
             e.preventDefault();
             $("#showable159").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable160">
 <div class="showable-inner">
@@ -3207,12 +3358,13 @@ the first <em>20</em> lines of the file.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink160").click(function(e){
             e.preventDefault();
             $("#showable160").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable161">
@@ -3230,12 +3382,13 @@ output to a file called <em>sample_1.dna.txt</em>.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink162").click(function(e){
             e.preventDefault();
             $("#showable162").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable163">
 <div class="showable-inner">
@@ -3252,12 +3405,13 @@ from the file. The DNA sequences appear in column 2, we select that column using
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink163").click(function(e){
             e.preventDefault();
             $("#showable163").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable164">
@@ -3276,12 +3430,13 @@ see a lot of repeated sequences of As.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink165").click(function(e){
             e.preventDefault();
             $("#showable165").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable166">
 <div class="showable-inner">
@@ -3296,12 +3451,13 @@ file.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink166").click(function(e){
             e.preventDefault();
             $("#showable166").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable167">
@@ -3321,12 +3477,13 @@ redirection now.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink168").click(function(e){
             e.preventDefault();
             $("#showable168").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable169">
 <div class="showable-inner">
@@ -3348,12 +3505,13 @@ removed.</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink169").click(function(e){
             e.preventDefault();
             $("#showable169").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable170">
@@ -3371,12 +3529,13 @@ duplicated in <em>sample_1.dna.sorted.txt</em>?</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink171").click(function(e){
             e.preventDefault();
             $("#showable171").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container hint showable-hidden" id="showable172">
 <div class="showable-inner">
@@ -3387,12 +3546,13 @@ duplicated in <em>sample_1.dna.sorted.txt</em>?</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink172").click(function(e){
             e.preventDefault();
             $("#showable172").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable173">
 <div class="showable-inner">
@@ -3406,12 +3566,13 @@ duplicated in <em>sample_1.dna.sorted.txt</em>?</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink173").click(function(e){
             e.preventDefault();
             $("#showable173").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable174">
@@ -3434,6 +3595,7 @@ sample_1.fastq.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink176").click(function(e){
             e.preventDefault();
@@ -3444,18 +3606,19 @@ sample_1.fastq.</span></div>
                 $("#showablelink176").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink175").click(function(e){
             e.preventDefault();
             $("#showable175").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable177">
 <div class="showable-inner">
@@ -3473,12 +3636,13 @@ FASTQ file and ends with a list of duplicated DNA sequences:</p>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink177").click(function(e){
             e.preventDefault();
             $("#showable177").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable178">
@@ -3497,12 +3661,13 @@ in sample_1.fastq.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink179").click(function(e){
             e.preventDefault();
             $("#showable179").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable180">
 <div class="showable-inner">
@@ -3533,12 +3698,13 @@ then exclamation mark) then it tells bash this file is a script that can be inte
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink180").click(function(e){
             e.preventDefault();
             $("#showable180").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable181">
@@ -3563,6 +3729,7 @@ as a command line parameter.</span></div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink183").click(function(e){
             e.preventDefault();
@@ -3573,18 +3740,19 @@ as a command line parameter.</span></div>
                 $("#showablelink183").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink182").click(function(e){
             e.preventDefault();
             $("#showable182").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable184">
 <div class="showable-inner">
@@ -3643,12 +3811,13 @@ provide an *exit ..* line then it automatically returns a 0 for you.</div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink184").click(function(e){
             e.preventDefault();
             $("#showable184").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <hr />
 <div class="showable-container question showable-hidden" id="showable185">
@@ -3689,12 +3858,13 @@ sample_3.fastq YYYYY
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink186").click(function(e){
             e.preventDefault();
             $("#showable186").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="finished">Finished</h2>
 <p>Well done, you learnt a lot over the last 5 topics and you should be proud of your achievement; it 
@@ -3703,21 +3873,43 @@ was a lot to take in.</p>
 Workshop.</p>
 <p>You will no-doubt forget a lot of what you learnt here so I encourage you to save a link to this 
 Workshop for later reference.</p>
-<p>Thank you for your attendance, please don't forget to complete the VLSCI training survey and give it
+<p>Thank you for your attendance, please don't forget to complete the Melbourne Bioinformatics training survey and give it
 back to the Workshop facilitators.</p></div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-            
-            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+                <p><a href="https://www.melbournebioinformatics.org.au/">Melbourne Bioinformatics</a></p>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-
-        <script src="../../js/jquery-1.10.2.min.js"></script>
-        <script src="../../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
         <script src="../../js/base.js"></script>
         <script src="../../includes/media/delayed-jquery.js"></script>
-        <script src="../../includes/media/mdx_showable.js"></script>
+        <script src="../../includes/media/mdx_showable.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
     </body>
 </html>

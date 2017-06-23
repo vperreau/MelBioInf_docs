@@ -8,25 +8,25 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-
-	<title>Tutorial - LSCC Documentation</title>
-
+        <title>Tutorial - Bioinformatics Documentation</title>
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../extra.css" rel="stylesheet">
         <link href="../../../includes/media/mdx_showable.css" rel="stylesheet">
         <link href="../../../includes/media/mdx_showable_user.css" rel="stylesheet">
         <link href="../../../includes/media/slides.css" rel="stylesheet">
         <link href="../../../includes/media/tute.css" rel="stylesheet">
-
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-
-        
+	
+	<script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script> 
     </head>
 
     <body>
@@ -43,170 +43,198 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <!-- Main title -->
-            <a class="navbar-brand" href="../../..">LSCC Documentation</a>
+            <a class="navbar-brand" href="../../..">Bioinformatics Documentation</a>
         </div>
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
-            <!-- Main navigation -->
-            <ul class="nav navbar-nav">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../">Overview</a>
+</li>
+                            
+<li >
+    <a href="../../ngs_overview/NGS_Overview/">NGS Overview</a>
+</li>
+                            
+<li >
+    <a href="../../using_git/Using_Git/">Using Git and Github for revision control</a>
+</li>
+                            
+<li >
+    <a href="../../gvl_launch/gvl_launch/">Launching a Personal GVL Server</a>
+</li>
+                            
+<li >
+    <a href="../../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
+</li>
+                            
+<li >
+    <a href="../../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
+</li>
+                            
+<li >
+    <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
+</li>
+                            
+<li >
+    <a href="../../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
+</li>
+                            
+<li >
+    <a href="../../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
+</li>
+                            
+<li >
+    <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
+</li>
+                            
+<li >
+    <a href="../../hpc/">Introduction to HPC</a>
+</li>
+                            
+<li >
+    <a href="../../unix/">Introduction to Unix</a>
+</li>
+                            
+<li >
+    <a href="../../python_overview/python_overview/">Python Overview</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Microbial de novo Assembly for Illumina Data</a>
+    <ul class="dropdown-menu">
             
+<li >
+    <a href="../../assembly/assembly/">Tutorial</a>
+</li>
             
-                <li >
-                    <a href="../../..">Home</a>
-                </li>
+<li >
+    <a href="../../assembly/assembly-background/">Method Background</a>
+</li>
+    </ul>
+  </li>
+                            
+<li >
+    <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Variant Detection Advanced</a>
+    <ul class="dropdown-menu">
             
+<li >
+    <a href="../../var_detect_advanced/var_detect_advanced/">Var detect advanced</a>
+</li>
             
+<li >
+    <a href="../../var_detect_advanced/var_detect_advanced_background/">Var detect advanced background</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Identifying proteins from mass spectrometry data</a>
+    <ul class="dropdown-menu">
             
-                <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
-                        <li >
-                            <a href="../../">Overview</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../ngs_overview/NGS_Overview/">NGS Overview</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../using_git/Using_Git/">Using Git and Github for revision control</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../gvl_launch/gvl_launch/">Launching a Personal GVL Server</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../hpc/">Introduction to HPC</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../unix/">Introduction to Unix</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../python_overview/python_overview/">Python Overview</a>
-                        </li>
-                    
-                        <li >
-                            <a href="">Microbial de novo Assembly for Illumina Data</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
-                        </li>
-                    
-                        <li >
-                            <a href="">Variant Detection Advanced</a>
-                        </li>
-                    
-                        <li class="active">
-                            <a href="">Identifying proteins from mass spectrometry data</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../genomespace/genomespace/">Introduction to GenomeSpace</a>
-                        </li>
-                    
-                    </ul>
-                </li>
+<li class="active">
+    <a href="./">Tutorial</a>
+</li>
             
+<li >
+    <a href="../background_galaxy/">Galaxy Background</a>
+</li>
             
+<li >
+    <a href="../background_data_formats/">Data Formats Background</a>
+</li>
             
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
-                        <li >
-                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
-                        </li>
-                    
-                    </ul>
-                </li>
+<li >
+    <a href="../background_findcountitems_workflow/">Create find count items workflow</a>
+</li>
             
+<li >
+    <a href="../background_protein_databases/">Protein Databases</a>
+</li>
             
-            </ul>
+<li >
+    <a href="../background_search_engines/">Search Engines</a>
+</li>
+            
+<li >
+    <a href="../background_protein_prophet/">Protein Prophet</a>
+</li>
+            
+<li >
+    <a href="../../alignment/alignment/">Alignment Tutorial</a>
+</li>
+    </ul>
+  </li>
+                            
+<li >
+    <a href="../../genomespace/genomespace/">Introduction to GenomeSpace</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
 
-            <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
-                <li >
-                    <a rel="next" href="../../var_detect_advanced/var_detect_advanced_background/">
-                        <i class="fa fa-arrow-left"></i> Previous
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="../background_galaxy/">
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </li>
-                
+                    <li >
+                        <a rel="next" href="../../var_detect_advanced/var_detect_advanced_background/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../background_galaxy/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
 </div>
 
         <div class="container">
-            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-    
         <li class="main active"><a href="#identifying-proteins-from-mass-spec-data">Identifying proteins from mass spec data</a></li>
-        
             <li><a href="#overview">Overview</a></li>
-        
             <li><a href="#login-to-galaxy">Login to Galaxy</a></li>
-        
             <li><a href="#import-mass-spec-data">Import mass spec data</a></li>
-        
             <li><a href="#basic-properties-of-the-data">Basic properties of the data</a></li>
-        
             <li><a href="#alternate-data-formats">Alternate data formats</a></li>
-        
             <li><a href="#obtain-a-search-database">Obtain a Search Database</a></li>
-        
             <li><a href="#run-a-search-using-xtandem">Run a search using X!Tandem</a></li>
-        
             <li><a href="#convert-results-to-tabular-format">Convert Results to tabular format</a></li>
-        
             <li><a href="#sort-tabular-outputs">Sort tabular outputs</a></li>
-        
             <li><a href="#convert-raw-scores-to-probabilities">Convert raw scores to probabilities</a></li>
-        
             <li><a href="#perform-protein-inference">Perform Protein Inference</a></li>
-        
             <li><a href="#functional-enrichment-analysis">Functional enrichment analysis</a></li>
-        
-    
     </ul>
 </div></div>
-            <div class="col-md-9" role="main">
+                <div class="col-md-9" role="main">
 
 <h1 id="identifying-proteins-from-mass-spec-data">Identifying proteins from mass spec data</h1>
 <h2 id="overview">Overview</h2>
@@ -267,7 +295,9 @@
 <div class="showable-header question" id="showabletitle0"><span class="link-like" id="showablelink0"> 1) What format is the OrganelleSample.mzML file?</span></div>
 </div>
 </div>
-<script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+<script>//<![CDATA[<!--
+(function(w,d,u){if(!w.$){w._delayed=true;console.info("Delaying JQuery calls");w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}}})(window,document)
+//-->]]></script>
 <div class="showable-container hint showable-hidden" id="showable1">
 <div class="showable-inner">
 <div class="showable-header hint" id="showabletitle1"><a href="" id="showablelink1">Hint</a></div>
@@ -277,12 +307,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink1").click(function(e){
             e.preventDefault();
             $("#showable1").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable2">
 <div class="showable-inner">
@@ -295,12 +326,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink2").click(function(e){
             e.preventDefault();
             $("#showable2").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <p><strong>MS versus MS/MS:</strong></p>
 <p>A key feature of <em>Tandem</em> mass spectrometry is the acquisition of mass spectra (spectra) that measure the masses of precursor ions (whole peptides) as well as spectra that measure the fragment masses of a single selected peptide.  These two types of measurements are called <strong>MS</strong> and <strong>MS/MS</strong> spectra respectively.  The following schematic shows how an <strong>MS/MS</strong> scan results from the fragmentation of a selected product ion.  Often multiple <strong>MS/MS</strong> spectra are obtained for each <strong>MS</strong> scan, selecting different precursor masses each time so that as many peptides as possible can be analyzed.</p>
@@ -329,6 +361,7 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink5").click(function(e){
             e.preventDefault();
@@ -339,18 +372,19 @@
                 $("#showablelink5").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink4").click(function(e){
             e.preventDefault();
             $("#showable4").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable6">
 <div class="showable-inner">
@@ -363,12 +397,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink6").click(function(e){
             e.preventDefault();
             $("#showable6").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <blockquote>
 <p>In the previous exercise we used two galaxy tools in succession to find out the number of items in a file that matched some text. Future exercises use the same technique so you might find it useful to create a tiny workflow to automate this proceedure. <a href="../background_findcountitems_workflow/">See the instructions here</a></p>
@@ -389,12 +424,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink8").click(function(e){
             e.preventDefault();
             $("#showable8").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable9">
 <div class="showable-inner">
@@ -407,12 +443,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink9").click(function(e){
             e.preventDefault();
             $("#showable9").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="alternate-data-formats">Alternate data formats</h2>
 <p>Another format you are likely to encounter for tandem mass spectrometry data is <em>Mascot Generic Format</em> or <em>mgf</em>.  Mascot Generic Format (<em>mgf</em>) is the data file format preferred by the <em>Mascot</em> search engine.  It is a text based format is much easier to read by hand than the <em>mzML</em> file.  Each spectrum appears between "BEGIN IONS" and "END IONS" statements and simply consists of (<em>mz</em>,<em>intensity</em>) pairs.  Additional summary information about the precursor (whole peptide) ion such as its mass, retention time and charge are included. </p>
@@ -447,6 +484,7 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink12").click(function(e){
             e.preventDefault();
@@ -457,18 +495,19 @@
                 $("#showablelink12").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink11").click(function(e){
             e.preventDefault();
             $("#showable11").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable13">
 <div class="showable-inner">
@@ -482,12 +521,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink13").click(function(e){
             e.preventDefault();
             $("#showable13").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="obtain-a-search-database">Obtain a Search Database</h2>
 <p>Setting up a search database is a critical step.  For this tutorial we have created a database for you, but if you need to create a database for your own data you'll need to consider the following key issues;</p>
@@ -530,12 +570,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink15").click(function(e){
             e.preventDefault();
             $("#showable15").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable16">
 <div class="showable-inner">
@@ -548,12 +589,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink16").click(function(e){
             e.preventDefault();
             $("#showable16").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="run-a-search-using-xtandem">Run a search using X!Tandem</h2>
 <p>A large number of search engines now exist for proteomics data.  This exercise uses <em>X!Tandem</em> which is one of the fastest and most widely used. Other search engines include <em>OMSSA</em>, <em>MS-GF+</em> and <em>Mascot</em>.</p>
@@ -619,7 +661,8 @@
 <p>To get the most out of tabular files it is often necessary to know the column number corresponding to columns of interest.  Explore the column assignments in your tabular file by clicking on its title in your galaxy history.  This will show extra details about the item, including a handy preview where column numbers are displayed.</p>
 <div class="showable-container question showable-hidden" id="showable17">
 <div class="showable-inner">
-<div class="showable-header question" id="showabletitle17"><span class="link-like" id="showablelink17"> 6) In what column number is the <em>assumed_charge</em> of peptides in the <em>pepXML</em> tabular file?</span></div>
+<div class="showable-header question" id="showabletitle17"><span class="link-like" id="showablelink17"> 6) In what column number is the <em>assumed_charge</em> of peptides in the <em>pepXML</em> tabular file?
+</span></div>
 </div>
 </div>
 <div class="showable-container answer showable-hidden" id="showable18">
@@ -633,12 +676,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink18").click(function(e){
             e.preventDefault();
             $("#showable18").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="sort-tabular-outputs">Sort tabular outputs</h2>
 <p>Examine the tabular output file from the previous step.  It contains many columns, of which the most interesting are probably the raw search engine score and the name of the protein from which each peptide has been derived. Note the presence of plenty of decoy proteins among the results.  These decoys should tend to have quite poor scores compared with real hits.  The <em>raw score</em> for <em>X!Tandem</em> searches is an <em>E-value</em>.  To push these decoys to the bottom of the list we can sort the data by <em>raw score</em>. </p>
@@ -680,6 +724,7 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink21").click(function(e){
             e.preventDefault();
@@ -690,18 +735,19 @@
                 $("#showablelink21").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink20").click(function(e){
             e.preventDefault();
             $("#showable20").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable22">
 <div class="showable-inner">
@@ -715,12 +761,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink22").click(function(e){
             e.preventDefault();
             $("#showable22").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container question showable-hidden" id="showable23">
 <div class="showable-inner">
@@ -741,6 +788,7 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink25").click(function(e){
             e.preventDefault();
@@ -751,18 +799,19 @@
                 $("#showablelink25").text("Less");
             }
         });
-    });
+    }); //-->]]>
     </script>
 </div>
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink24").click(function(e){
             e.preventDefault();
             $("#showable24").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable26">
 <div class="showable-inner">
@@ -775,12 +824,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink26").click(function(e){
             e.preventDefault();
             $("#showable26").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <h2 id="perform-protein-inference">Perform Protein Inference</h2>
 <p>Up to this point we have looked at peptide to spectrum matches <em>PSMs</em>.  Each of the peptides observed will have come from a protein sequence in the <em>fasta</em> file that we used as a database, and this protein is recorded along with the <em>PSM</em> itself in all of the result tables we've viewed so far.  Unfortunately, the process of inferring the existence of proteins based on these <em>PSMs</em> is much more complicated than that because some peptides are found in more than one protein, and of course some proteins are supported by more than one <em>PSM</em>.</p>
@@ -804,12 +854,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink28").click(function(e){
             e.preventDefault();
             $("#showable28").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable29">
 <div class="showable-inner">
@@ -822,12 +873,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink29").click(function(e){
             e.preventDefault();
             $("#showable29").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <p>If you have time, read over <a href="../background_protein_prophet/">these notes</a> on the Protein Prophet output.  Explore your output (use the unfiltered tabular output) to find examples of different kinds of Protein groupings.</p>
 <h2 id="functional-enrichment-analysis">Functional enrichment analysis</h2>
@@ -860,12 +912,13 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink31").click(function(e){
             e.preventDefault();
             $("#showable31").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script>
 <div class="showable-container answer showable-hidden" id="showable32">
 <div class="showable-inner">
@@ -878,26 +931,49 @@
 </div>
 </div>
 <script>
+    //<![CDATA[<!--
     $(document).ready(function(){
         $("#showablelink32").click(function(e){
             e.preventDefault();
             $("#showable32").toggleClass("showable-hidden");
         });
-    });
+    }); //-->]]>
     </script></div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-            
-            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+                <p><a href="https://www.melbournebioinformatics.org.au/">Melbourne Bioinformatics</a></p>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-
-        <script src="../../../js/jquery-1.10.2.min.js"></script>
-        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../../../js/highlight.pack.js"></script>
+        <script>var base_url = '../../..';</script>
+        <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
         <script src="../../../js/base.js"></script>
         <script src="../../../includes/media/delayed-jquery.js"></script>
-        <script src="../../../includes/media/mdx_showable.js"></script>
+        <script src="../../../includes/media/mdx_showable.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
     </body>
 </html>
