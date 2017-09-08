@@ -1,12 +1,12 @@
 {
     "docs": [
         {
-            "location": "/tutorials/",
+            "location": "/",
             "text": "Tutorials and protocols\n\n\nThese tutorials have been developed by bioinformaticians at Melbourne Bioinformatics (formerly VLSCI). They are regularly delivered on-site or may be run in-house for your group. Many of the training materials were developed for use on the \nAustralian-made Genomics Virtual Laboratory\n and these are used in our formal workshops and are also available for use to deliver your own workshops or for self-directed learning.",
             "title": "Home"
         },
         {
-            "location": "/tutorials/#tutorials-and-protocols",
+            "location": "/#tutorials-and-protocols",
             "text": "These tutorials have been developed by bioinformaticians at Melbourne Bioinformatics (formerly VLSCI). They are regularly delivered on-site or may be run in-house for your group. Many of the training materials were developed for use on the  Australian-made Genomics Virtual Laboratory  and these are used in our formal workshops and are also available for use to deliver your own workshops or for self-directed learning.",
             "title": "Tutorials and protocols"
         },
