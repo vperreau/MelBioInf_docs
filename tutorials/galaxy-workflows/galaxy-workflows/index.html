@@ -376,7 +376,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#workflow-creation-method-1" title="Workflow creation: Method 1" class="md-nav__link">
     Workflow creation: Method 1
   </a>
@@ -395,8 +400,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#workflow-creation-method-2" title="Workflow Creation: Method 2" class="md-nav__link">
     Workflow Creation: Method 2
   </a>
@@ -429,8 +434,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#running-the-workflow" title="Running the workflow" class="md-nav__link">
     Running the workflow
   </a>
@@ -449,11 +454,6 @@
   <a href="#run-the-workflow" title="Run the workflow" class="md-nav__link">
     Run the workflow
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -933,7 +933,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#workflow-creation-method-1" title="Workflow creation: Method 1" class="md-nav__link">
     Workflow creation: Method 1
   </a>
@@ -952,8 +957,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#workflow-creation-method-2" title="Workflow Creation: Method 2" class="md-nav__link">
     Workflow Creation: Method 2
   </a>
@@ -986,8 +991,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#running-the-workflow" title="Running the workflow" class="md-nav__link">
     Running the workflow
   </a>
@@ -1006,11 +1011,6 @@
   <a href="#run-the-workflow" title="Run the workflow" class="md-nav__link">
     Run the workflow
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1118,7 +1118,7 @@ You might have to wait for a bit, then:
 
 -->
 
-<h3 id="workflow-creation-method-1">Workflow creation: Method 1</h3>
+<h2 id="workflow-creation-method-1">Workflow creation: Method 1</h2>
 <p>We will create a workflow from an existing history. You can use this method to make a re-useable analysis from one you’ve already done. i.e. You can perform the analysis once and then create a workflow out of it to re-use it on more/new data. We will create a workflow from the history you imported in step 1 above. The footnote below explains the steps that created this history. These are the steps we will mimic in the workflow.</p>
 <p>Make sure your current history is the one you imported in Section 2 - Step 1 above (<em>imported: workflow_finished.</em>) If not, switch to it. If you couldn't import it, you should be able to complete this step with any suitable history.</p>
 <p><strong>Now we will create the workflow.</strong></p>
@@ -1132,7 +1132,7 @@ You might have to wait for a bit, then:
 <li>Click <strong>Create Workflow</strong></li>
 </ul>
 <p>The workflow is now accessible via the bottom of the tool pane by clicking on All Workflows.</p>
-<h4 id="some-discussion">Some discussion</h4>
+<h3 id="some-discussion">Some discussion</h3>
 <p>Have a look at your workflow. Click on its button in the workflow list. It’s tool interface will appear. You can now run this workflow any time you like with different input datasets. NOTE: The input data sets must be of the same types as the original ones. i.e. In our case, two fastq reads files and one fasta reference sequence.</p>
 <p>More interesting though is to:</p>
 <ul>
@@ -1142,9 +1142,9 @@ You might have to wait for a bit, then:
 </ul>
 <p>A visualisation of your workflow will appear. Note the connections and the steps.</p>
 <p>Next we’ll go through how to create this workflow using the editor..</p>
-<h3 id="workflow-creation-method-2">Workflow Creation: Method 2</h3>
+<h2 id="workflow-creation-method-2">Workflow Creation: Method 2</h2>
 <p>We will now create the same read mapping/variant calling workflow using the editor directly. The workflow needs to take in some reads and a reference, map the reads to the reference using BWA, run Freebayes on the BAM output from BWA to call the variants, and finally filter the resulting vcf file.</p>
-<h4 id="step-1-create-a-workflow-name-and-edit-space">Step 1: Create a workflow name and edit space.</h4>
+<h3 id="step-1-create-a-workflow-name-and-edit-space">Step 1: Create a workflow name and edit space.</h3>
 <ul>
 <li>Click on <strong>Workflow</strong> in Galaxy’s menu.</li>
 <li>Click on the <strong>Create New Workflow</strong> button.</li>
@@ -1152,7 +1152,7 @@ You might have to wait for a bit, then:
 <li>Click the <strong>Create</strong> button.</li>
 </ul>
 <p>You should now be presented with a blank workflow editing grid.</p>
-<h4 id="step-2-open-the-editor-and-place-component-tools">Step 2: Open the editor and place component tools</h4>
+<h3 id="step-2-open-the-editor-and-place-component-tools">Step 2: Open the editor and place component tools</h3>
 <p><strong>Add three input datafiles.</strong></p>
 <ul>
 <li>In the Workflow control section of the tool pane, click on <strong>Inputs -&gt; Input dataset</strong> three times.</li>
@@ -1225,13 +1225,13 @@ You might have to wait for a bit, then:
 <li>Click on the star next to "Map with BWA’s" bam file output.</li>
 <li>Click on the star next to "Filter’s" output vcf.</li>
 </ul>
-<h4 id="step-3-save-it">Step 3: Save it!</h4>
+<h3 id="step-3-save-it">Step 3: Save it!</h3>
 <p>Click on the <img src="../media/Galaxy-menu.png" width=20 /> at the top of the workflow grid and select <strong>Save</strong>.</p>
 <p>Congratulations. You’ve just created a Galaxy workflow.</p>
 <p>Now to run it!</p>
-<h3 id="running-the-workflow">Running the workflow</h3>
+<h2 id="running-the-workflow">Running the workflow</h2>
 <p>We will now make a new history called "Test" and run the workflow on it’s data.</p>
-<h4 id="create-the-new-history">Create the new history</h4>
+<h3 id="create-the-new-history">Create the new history</h3>
 <ul>
 <li>From the Histories Menu, select <strong>Copy Datasets</strong></li>
 <li>Select the 2 x fastq files and the Ecoli .fna file.</li>
@@ -1239,7 +1239,7 @@ You might have to wait for a bit, then:
 <li>Click <strong>Copy History Items</strong> button</li>
 <li>Click on the link to the new history in the green bar at the top of the screen</li>
 </ul>
-<h4 id="run-the-workflow">Run the workflow</h4>
+<h3 id="run-the-workflow">Run the workflow</h3>
 <ul>
 <li>On the tools pane, click <strong>All Workflows</strong></li>
 <li>Select the <em>Variants from scratch</em> workflow (or whatever you called it.)</li>
