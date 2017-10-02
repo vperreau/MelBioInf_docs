@@ -16,7 +16,7 @@
     
     
       
-        <title>Galaxy Workflows - Bioinformatics Documentation</title>
+        <title>Tutorial - Bioinformatics Documentation</title>
       
     
     
@@ -81,8 +81,12 @@
                   General Tutorials
                 </span>
               
+                <span class="md-header-nav__parent">
+                  Galaxy Workflows
+                </span>
+              
             
-            Galaxy Workflows
+            Tutorial
           
         </span>
       </div>
@@ -297,6 +301,27 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7" checked>
+    
+    <label class="md-nav__link" for="nav-2-7">
+      Galaxy Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        Galaxy Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
@@ -305,11 +330,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Galaxy Workflows
+        Tutorial
       </label>
     
-    <a href="./" title="Galaxy Workflows" class="md-nav__link md-nav__link--active">
-      Galaxy Workflows
+    <a href="./" title="Tutorial" class="md-nav__link md-nav__link--active">
+      Tutorial
     </a>
     
       
@@ -360,8 +385,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#some-discussion" title="Some discussion:" class="md-nav__link">
-    Some discussion:
+  <a href="#some-discussion" title="Some discussion" class="md-nav__link">
+    Some discussion
   </a>
   
 </li>
@@ -450,6 +475,23 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../history_creation/" title="History Creation" class="md-nav__link">
+      History Creation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -900,8 +942,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#some-discussion" title="Some discussion:" class="md-nav__link">
-    Some discussion:
+  <a href="#some-discussion" title="Some discussion" class="md-nav__link">
+    Some discussion
   </a>
   
 </li>
@@ -1028,7 +1070,7 @@
 </ul>
 <hr />
 <h2 id="section-1-preparation">Section 1: Preparation.</h2>
-<p>The purpose of this section is to get you to log in to the server.. For this workshop, you can use a Galaxy server that you have created by following the steps outlined in: <a href="">Launch a GVL Galaxy Instance</a> or you can use the public <a href="http://galaxy-tut.genome.edu.au">Galaxy-tut</a></p>
+<p>The purpose of this section is to get you to log in to the server.. For this workshop, you can use a Galaxy server that you have created by following the steps outlined in: <a href="">Launch a GVL Galaxy Instance</a> or you can use the public <a href="http://galaxy-mel.genome.edu.au">Galaxy-mel</a></p>
 <p><strong>Go to Galaxy URL of your server in Firefox or Chrome (your choice, please don't use IE or Safari.)</strong></p>
 <ul>
 <li>If you have previously registered on this server just log in:<ul>
@@ -1052,20 +1094,33 @@
 <h2 id="section-2-create-and-run-a-workflow">Section 2: Create and run a workflow.</h2>
 <p>This section will show you two different methods to create a workflow and then how to run one.</p>
 <h3 id="import-the-workflow-history">Import the workflow history</h3>
-<p>This step will show you how to import a history from a remote source into your own workspace. We will be using this history to build a workflow.</p>
+<p>In this step we will import a shared history to our workspace so we can extract a workflow from it. This will only work on Galaxy servers which have the history available on it. If yours doesn't have the appropriate history, there are instructions to create it <a href="../history_creation/">here</a>. Alternatively, you can extract a workflow from any history you have in your "Saved Histories."</p>
 <ul>
-<li>From the histories menu <img src="../media/Galaxy-menu.png" width=20 />, click <strong>Import from File</strong>.</li>
-<li>Enter <em>https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/Workflow-finished-history.tar.gz</em> in the URL box.</li>
-<li>Click <strong>Submit</strong></li>
+<li>From the menu at the top of the Galaxy window, click <strong>Shared Data -&gt; Histories</strong></li>
+<li>Find the history called "<em>workflow_finished</em>" and click on it.</li>
+<li>Then click on <strong>Import history</strong> at the top right of the screen.</li>
+<li>Change the name if you wish and then click <strong>Import</strong></li>
 </ul>
-<p>You might have to wait for a bit, then:</p>
-<ul>
-<li>From the history menu <img src="../media/Galaxy-menu.png" width=20 />, click <strong>Saved Histories</strong></li>
-<li>Select the history: <em>Imported: Workflow-finished</em></li>
-</ul>
+<p>This history should now be in your history pane on the right.</p>
+<!--
+
+This step will show you how to import a history from a remote source into your own workspace. We will be using this history to build a workflow.
+
+* From the histories menu <img src="../media/Galaxy-menu.png" width=20 />, click **Import from File**.
+* Enter *https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/Workflow-finished-history.tar.gz* in the URL box.
+* Click **Submit**
+
+You might have to wait for a bit, then:
+
+* From the history menu <img src="../media/Galaxy-menu.png" width=20 />, click **Saved Histories**
+* Select the history: *Imported: Workflow-finished*
+
+
+-->
+
 <h3 id="workflow-creation-method-1">Workflow creation: Method 1</h3>
 <p>We will create a workflow from an existing history. You can use this method to make a re-useable analysis from one you’ve already done. i.e. You can perform the analysis once and then create a workflow out of it to re-use it on more/new data. We will create a workflow from the history you imported in step 1 above. The footnote below explains the steps that created this history. These are the steps we will mimic in the workflow.</p>
-<p>Make sure your current history is the one you imported in Section 2 - Step 1 above (<em>imported: Workflow_finished.</em>) If not, switch to it.</p>
+<p>Make sure your current history is the one you imported in Section 2 - Step 1 above (<em>imported: workflow_finished.</em>) If not, switch to it. If you couldn't import it, you should be able to complete this step with any suitable history.</p>
 <p><strong>Now we will create the workflow.</strong></p>
 <ul>
 <li>Click on the histories menu button <img src="../media/Galaxy-menu.png" width=20 /> at the top of the history pane.</li>
@@ -1077,8 +1132,8 @@
 <li>Click <strong>Create Workflow</strong></li>
 </ul>
 <p>The workflow is now accessible via the bottom of the tool pane by clicking on All Workflows.</p>
-<h4 id="some-discussion">Some discussion:</h4>
-<p>Have a look at your workflow. Click on its button in the workflow list. It’s tool interface will appear. You can now run this workflow any time you like with different input datasets. NOTE: The input data sets must be of the same types as the original ones. i.e. Two fastq reads files and one fasta reference sequence.</p>
+<h4 id="some-discussion">Some discussion</h4>
+<p>Have a look at your workflow. Click on its button in the workflow list. It’s tool interface will appear. You can now run this workflow any time you like with different input datasets. NOTE: The input data sets must be of the same types as the original ones. i.e. In our case, two fastq reads files and one fasta reference sequence.</p>
 <p>More interesting though is to:</p>
 <ul>
 <li>Click on the  <strong>Workflows</strong> link in the top menu</li>
@@ -1088,7 +1143,7 @@
 <p>A visualisation of your workflow will appear. Note the connections and the steps.</p>
 <p>Next we’ll go through how to create this workflow using the editor..</p>
 <h3 id="workflow-creation-method-2">Workflow Creation: Method 2</h3>
-<p>We will now create the same read mapping/variant calling workflow using the editor directly. We need to get some reads and a reference, map the reads to the reference using BWA, run Freebayes on the BAM to call the variants, and finally filter the resulting vcf file.</p>
+<p>We will now create the same read mapping/variant calling workflow using the editor directly. The workflow needs to take in some reads and a reference, map the reads to the reference using BWA, run Freebayes on the BAM output from BWA to call the variants, and finally filter the resulting vcf file.</p>
 <h4 id="step-1-create-a-workflow-name-and-edit-space">Step 1: Create a workflow name and edit space.</h4>
 <ul>
 <li>Click on <strong>Workflow</strong> in Galaxy’s menu.</li>
@@ -1096,13 +1151,8 @@
 <li>In the "Workflow Name" text box type: <em>Variants from scratch</em></li>
 <li>Click the <strong>Create</strong> button.</li>
 </ul>
-<p>You’ll now see a list of workflows. Your’s will be in that list.</p>
+<p>You should now be presented with a blank workflow editing grid.</p>
 <h4 id="step-2-open-the-editor-and-place-component-tools">Step 2: Open the editor and place component tools</h4>
-<ul>
-<li>Click on the down arrow on your workflow’s button.</li>
-<li>Select <strong>Edit</strong></li>
-</ul>
-<p>You’ll be presented with a blank workflow grid.</p>
 <p><strong>Add three input datafiles.</strong></p>
 <ul>
 <li>In the Workflow control section of the tool pane, click on <strong>Inputs -&gt; Input dataset</strong> three times.</li>
@@ -1149,14 +1199,14 @@
 <p>If you’re keen - <strong>Note: this is optional.</strong> Also change the following parameters the right hand pane for freebayes to make it a bit more sensible for variant calling in bacterial genomes.</p>
 <ul>
 <li>"Choose parameter selection level": <em>Complete list of all options</em></li>
-<li>"Set population model": <em>Yes</em></li>
+<li>"Population model options": <em>Set population model options</em></li>
 <li>"Set ploidy for the analysis": <em>1</em></li>
-<li>"Set input filters": <em>Yes</em></li>
+<li>"Input filters": <em>Set input filters</em></li>
 <li>"Exclude alignments from analysis if they have a mapping quality less than": <em>20</em></li>
 <li>"Exclude alleles from analysis if their supporting base quality is less than": <em>20</em></li>
 <li>"Require at least this fraction of observations … to evaluate the position": <em>0.9</em></li>
 <li>"Require at least this count of observations .. to evaluate the position": <em>10</em></li>
-<li>"Set population and mappability priors": <em>Yes</em></li>
+<li>"Population and mappability priors": <em>Set population and mappability priors</em></li>
 <li>"Disable incorporation of prior expectations about observations": <em>Yes</em></li>
 </ul>
 <p><strong>Add in the Filter step.</strong></p>
