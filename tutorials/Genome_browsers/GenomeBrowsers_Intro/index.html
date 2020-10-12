@@ -1548,7 +1548,7 @@ Toolbar / Help / Training /</p>
 <li>Turn off individual tracks by right clicking on the grey bar for the track, or the track title in the genome view, and selecting 'hide'. If you accidentally hide the 'Alt haplotype' track you can turn it on again from the 'Mapping and Sequencing' Blue bar collection. (Don't forget to click on 'refresh' when turning on tracks)</li>
 <li>As you are zooming out note the change in the red line in the chromosome ideogram and how many bp are covered in the genome view.</li>
 <li>if you zoom out so that you are viewing the whole chromosome X in the genome view, how many alternate haplotypes are included in the datatrack. Hint: switch between the 'dense' and 'full' view of the track.
-    <img src="../media/UCSC_trackview.PNG" width="700"></li>
+<img src="../media/UCSC_trackview.PNG" width="700"></li>
 <li>Zoom in one one of these haplotypes by selecting the region in the number track at the top. then find out what the different colours signify in the colouring scheme by viewing the configuration page specific to this track.  The configuration page gives you a lot of information about the data track and its colouring. You can open the configuration page for a track by:<ul>
 <li>clicking on the grey bar for the track or,</li>
 <li>clicking on the track title in the Blue bar collection.</li>
@@ -1599,7 +1599,7 @@ Toolbar / Help / Training /</p>
 <li>Type NTRK2 in the position box.</li>
 <li>
 <p>navigate to the NTRK2 gene, zoom out until you can view all of the 5' UTRs and 3' UTRs for all transcript variants for this gene. Then drag the view left and right to center (like in Google maps) or select the region to center the gene in the Genome view.
-    <img src="../media/UCSC_NTRK2_GENCODE.PNG" width="700"></p>
+<img src="../media/UCSC_NTRK2_GENCODE.PNG" width="700"></p>
 </li>
 <li>
 <p>Which strand is the gene encoded on / transcribed from? (+ or - strand)</p>
@@ -1680,24 +1680,10 @@ Z score of expression level in Human brain (blue = low expression, red = high ex
     * Tool bar / My data / Public session / search for "hg38_NTRK2_blat_probes"</p>
 <h2 id="section-3-igv">Section 3: IGV</h2>
 <p>In this section we will ...</p>
-<p>Examine the new file by clicking on its <img src="../media/Galaxy-view.png" width=20 /> icon. We now have 2 columns instead of the 18 in the original file.</p>
 <p><strong>1. Subheadding.</strong></p>
 <ul>
 <li>From the tool panel, click on <strong>Text Manipulation -&gt; Remove beginning</strong> and set the following:</li>
 <li>"Remove First": <em>1</em></li>
-</ul>
-<p>Note the the new file is the same as the previous one without the header line.</p>
-<p><strong>2. Make a histogram.</strong></p>
-<ul>
-<li>From the tool panel, click on <strong>Graph/Display Data -&gt; Histogram</strong> and set the following:</li>
-<li>"Dataset": <em>Remove beginning on Data X</em></li>
-<li>"Numerical column for X axis": <em>c2</em></li>
-</ul>
-<p>Click on the <img src="../media/Galaxy-view.png" width=20 /> icon of the histogram to have a look at it. Note there are a few peaks. Maybe these correspond to single, double and triple copy number of these contigs.</p>
-<p><strong>3. Calculate summary statistics for contig coverage depth.</strong></p>
-<ul>
-<li>From the tool panel, click on <strong>Statistics -&gt; Summary Statisitics</strong> and set the following:</li>
-<li>"Summary statistics on": <em>Remove beginning on Data X</em></li>
 </ul>
 <h3 id="example-2-convert-fastq-to-fasta">Example 2: Convert Fastq to Fasta</h3>
 <p>This shows how to convert a fastq file to a fasta file. The tool creates a new file with the converted data.</p>
