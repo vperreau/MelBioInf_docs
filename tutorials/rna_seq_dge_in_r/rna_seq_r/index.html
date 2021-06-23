@@ -60,33 +60,16 @@
       <link rel="stylesheet" href="../../../extra.css">
     
     
-      
-        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EMNLJD0DWP"></script>
 <script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-21794901-5", "www.melbournebioinformatics.org.au/tutorials/")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
     }
-  })
+    gtag('js', new Date());
+    gtag('config', 'G-EMNLJD0DWP');
 </script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
-    
+
     
   </head>
   
@@ -497,6 +480,18 @@
   <li class="md-nav__item">
     <a href="../../var_detect_advanced/var_detect_advanced/" title="Variant Calling part 2 (Galaxy)" class="md-nav__link">
       Variant Calling part 2 (Galaxy)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../longread_sv_calling/longread_sv_calling/" title="Long-read Structural Variant Calling" class="md-nav__link">
+      Long-read Structural Variant Calling
     </a>
   </li>
 
@@ -1019,16 +1014,16 @@
                   <a href="https://github.com/melbournebioinformatics/MelBioInf_docs/edit/master/docs/tutorials/rna_seq_dge_in_r/rna_seq_r.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="rna-seq-analysis-in-r">RNA-seq analysis in R</h1>
+                <h1 id="rna-seq-analysis-in-r">RNA-seq analysis in R<a class="headerlink" href="#rna-seq-analysis-in-r" title="Permanent link">&para;</a></h1>
 <p>We recommend this course produced by COMBINE:</p>
 <ul>
 <li><a href="https://combine-australia.github.io/RNAseq-R/">RNA-seq analysis in R</a></li>
 </ul>
 <p>The tutorial introduces the analysis of RNA-seq count data using R. This includes reading the data into R, quality control and preprocessing, and performing differential expression analysis and gene set testing, with a focus on the limma-voom analysis workflow. </p>
-<h2 id="additional-rna-seq-analysis-links">Additional RNA-seq analysis links</h2>
+<h2 id="additional-rna-seq-analysis-links">Additional RNA-seq analysis links<a class="headerlink" href="#additional-rna-seq-analysis-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><a href="https://doi.org/10.7287/peerj.preprints.27283v2">Van Den Berge K. et al, 2018. RNA sequencing data: hitchhiker's guide to expression analysis. PeerJ Preprints 6:e27283v2</a></p>
+<p><a href="https://doi.org/10.7287/peerj.preprints.27283v2">Van Den Berge K. et al, 2018. RNA sequencing data: hitchhiker&rsquo;s guide to expression analysis. PeerJ Preprints 6:e27283v2</a></p>
 </li>
 <li>
 <p><a href="https://doi.org/10.12688/f1000research.7035.2">Love MI. et al, 2016. RNA-Seq workflow: gene-level exploratory analysis and differential expression. F1000Research, 4:1070</a></p>

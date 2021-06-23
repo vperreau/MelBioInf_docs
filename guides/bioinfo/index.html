@@ -60,33 +60,16 @@
       <link rel="stylesheet" href="../../extra.css">
     
     
-      
-        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EMNLJD0DWP"></script>
 <script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-21794901-5", "www.melbournebioinformatics.org.au/tutorials/")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
     }
-  })
+    gtag('js', new Date());
+    gtag('config', 'G-EMNLJD0DWP');
 </script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
-    
+
     
   </head>
   
@@ -544,6 +527,18 @@
   <li class="md-nav__item">
     <a href="../../tutorials/var_detect_advanced/var_detect_advanced/" title="Variant Calling part 2 (Galaxy)" class="md-nav__link">
       Variant Calling part 2 (Galaxy)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/longread_sv_calling/longread_sv_calling/" title="Long-read Structural Variant Calling" class="md-nav__link">
+      Long-read Structural Variant Calling
     </a>
   </li>
 
@@ -1031,9 +1026,9 @@
                   <a href="https://github.com/melbournebioinformatics/MelBioInf_docs/edit/master/docs/guides/bioinfo.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="what-is-bioinformatics">What is bioinformatics?</h1>
+                <h1 id="what-is-bioinformatics">What is bioinformatics?<a class="headerlink" href="#what-is-bioinformatics" title="Permanent link">&para;</a></h1>
 <p>Bioinformatics is the analysis of biologial data using computational methods. It includes the study of genes and genomes, RNA, proteins and metabolites.</p>
-<h2 id="getting-started">Getting started</h2>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>Look at our guides on the left for a general introduction to several key topics in bioinformatics.</p>
@@ -1045,7 +1040,7 @@
 <p>To analyse data, we recommend getting started with <a href="../galaxy/">Galaxy</a> - a free, web-based bioinformatics platform.</p>
 </li>
 </ul>
-<h2 id="resources">Resources</h2>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>Melbourne Bioinformatics tutorials: see the left hand panel for tutorials covering computing, genomics, RNA-seq, and proteomics.</p>

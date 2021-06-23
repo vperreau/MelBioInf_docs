@@ -60,33 +60,16 @@
       <link rel="stylesheet" href="../../../extra.css">
     
     
-      
-        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EMNLJD0DWP"></script>
 <script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-21794901-5", "www.melbournebioinformatics.org.au/tutorials/")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
     }
-  })
+    gtag('js', new Date());
+    gtag('config', 'G-EMNLJD0DWP');
 </script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
-    
+
     
   </head>
   
@@ -497,6 +480,18 @@
   <li class="md-nav__item">
     <a href="../../var_detect_advanced/var_detect_advanced/" title="Variant Calling part 2 (Galaxy)" class="md-nav__link">
       Variant Calling part 2 (Galaxy)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../longread_sv_calling/longread_sv_calling/" title="Long-read Structural Variant Calling" class="md-nav__link">
+      Long-read Structural Variant Calling
     </a>
   </li>
 
@@ -961,7 +956,7 @@
                   <a href="https://github.com/melbournebioinformatics/MelBioInf_docs/edit/master/docs/tutorials/unix/robinson-unix-link.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="introduction-to-unix">Introduction to Unix</h1>
+                <h1 id="introduction-to-unix">Introduction to Unix<a class="headerlink" href="#introduction-to-unix" title="Permanent link">&para;</a></h1>
 <p>Please see the link <a href="http://andrewjrobinson.github.io/vlsci-docs/tutorials/unix/">here</a>. </p>
                 
                   

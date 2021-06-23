@@ -60,33 +60,16 @@
       <link rel="stylesheet" href="../../extra.css">
     
     
-      
-        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EMNLJD0DWP"></script>
 <script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-21794901-5", "www.melbournebioinformatics.org.au/tutorials/")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
     }
-  })
+    gtag('js', new Date());
+    gtag('config', 'G-EMNLJD0DWP');
 </script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
-    
+
     
   </head>
   
@@ -493,6 +476,18 @@
   <li class="md-nav__item">
     <a href="../var_detect_advanced/var_detect_advanced/" title="Variant Calling part 2 (Galaxy)" class="md-nav__link">
       Variant Calling part 2 (Galaxy)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../longread_sv_calling/longread_sv_calling/" title="Long-read Structural Variant Calling" class="md-nav__link">
+      Long-read Structural Variant Calling
     </a>
   </li>
 
@@ -945,9 +940,9 @@
                   <h1>Home</h1>
                 
                 <p>PR reviewers and advice: Jessica Chung, Clare Sloggett</p>
-<p>Current slides (Jessica's slides from March 2018):
-- Overview: https://docs.google.com/presentation/d/1HovpEc5xzB_plxlIpWJAoTpb4309ujfiqOcLKGCDWYw
-- Workshop: https://docs.google.com/presentation/d/1YmJl8ks7tCg9UOYcjOg1rzr97Qrid5HsS4FqCqxgqq4</p>
+<p>Current slides (Jessica&rsquo;s slides from March 2018):
+- Overview: <a href="https://docs.google.com/presentation/d/1HovpEc5xzB_plxlIpWJAoTpb4309ujfiqOcLKGCDWYw">https://docs.google.com/presentation/d/1HovpEc5xzB_plxlIpWJAoTpb4309ujfiqOcLKGCDWYw</a>
+- Workshop: <a href="https://docs.google.com/presentation/d/1YmJl8ks7tCg9UOYcjOg1rzr97Qrid5HsS4FqCqxgqq4">https://docs.google.com/presentation/d/1YmJl8ks7tCg9UOYcjOg1rzr97Qrid5HsS4FqCqxgqq4</a></p>
 <p>Other slides:</p>
 <ul>
 <li>None yet</li>
