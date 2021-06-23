@@ -1396,7 +1396,7 @@
                   <a href="https://github.com/melbournebioinformatics/MelBioInf_docs/edit/master/docs/tutorials/hybrid_assembly/nanopore_assembly.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <p><img src="../media/melbioinf_logo.png" width="350"> <img src="../media/PRIMARY_A_Vertical_Housed_RGB.png" width="150"></p>
+                <p><img alt="melbioinf_logo" src="../media/melbioinf_logo.png" style="width:350px; padding-right:50px" />       <img alt="unimelb_logo" src="../media/PRIMARY_A_Vertical_Housed_RGB.png" style="width:150px" /></p>
 <h1 id="hybrid-genome-assembly-nanopore-and-illumina">Hybrid genome assembly - nanopore and illumina<a class="headerlink" href="#hybrid-genome-assembly-nanopore-and-illumina" title="Permanent link">&para;</a></h1>
 <p>Anticipated workshop duration when delivered to a group of participants is <strong>2 hours</strong>.  </p>
 <p>For queries relating to this workshop, contact Melbourne Bioinformatics (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#105;&#111;&#105;&#110;&#102;&#111;&#114;&#109;&#97;&#116;&#105;&#99;&#115;&#45;&#116;&#114;&#97;&#105;&#110;&#105;&#110;&#103;&#64;&#117;&#110;&#105;&#109;&#101;&#108;&#98;&#46;&#101;&#100;&#117;&#46;&#97;&#117;">&#98;&#105;&#111;&#105;&#110;&#102;&#111;&#114;&#109;&#97;&#116;&#105;&#99;&#115;&#45;&#116;&#114;&#97;&#105;&#110;&#105;&#110;&#103;&#64;&#117;&#110;&#105;&#109;&#101;&#108;&#98;&#46;&#101;&#100;&#117;&#46;&#97;&#117;</a>).</p>
@@ -1420,7 +1420,7 @@
 <p>This workshop is designed for participants with no command line knowledge. A web-based platform called Galaxy will be used to run our analysis.</p>
 <p>How do long- and short-read assembly methods differ?</p>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p><em>Assemble a genome!<br>Learn how to create and assess genome assemblies using the powerful combination of nanopore and illumina reads</em> </p>
+<p><em>Assemble a genome!<br>Learn how to create and assess genome assemblies using the powerful combination of nanopore and illumina reads</em></p>
 <p>This tutorial explores how long and short read data can be combined to produce a high-quality &lsquo;finished&rsquo; bacterial genome sequence. Termed &lsquo;hybrid assembly&rsquo;, we will use read data produced from two different sequencing platforms, Illumina (short read) and Oxford Nanopore Technologies (long read), to reconstruct a bacterial genome sequence.</p>
 <p>In this tutorial we will perform &lsquo;<em>de novo</em> assembly&rsquo;. De novo assembly is the process of assembling a genome from scratch using only the sequenced reads as input - no reference genome is used.  This approach is common practise when working with microorganisms, and has seen increasing use for eukaryotes (including humans) in recent times.  </p>
 <p>Using short read data (Illumina) alone for <em>de novo</em> assembly will produce a complete genome, but in pieces (commonly called a &lsquo;draft genome&rsquo;). For the genome to be assembled into a single chromosome (plus a sequence for each plasmid), reads would need to be longer than the longest repeated element on the genome (usually ~7,000 base pairs, Note: Illumina reads are 350 base maximum).   Draft bacterial genome sequences are cheap to produce (less than AUD$60) and useful (&gt;300,000 draft <em>Salmonella enterica</em> genome sequences published at NCBI <a href="https://www.ncbi.nlm.nih.gov/pathogens/organisms/">https://www.ncbi.nlm.nih.gov/pathogens/organisms/</a>), but sometimes you need a high-quality &lsquo;finished&rsquo; bacterial genome sequence.  There are &lt;1,000 are &lsquo;finished&rsquo; or &lsquo;closed&rsquo; <em>Salmonella enterica</em> genome sequences.</p>
@@ -1483,7 +1483,7 @@ We will perform assembly, then assess the quality of our assembly using two tool
 </li>
 <li><strong>Copy an existing history</strong><ul>
 <li>The data you will need is available in an existing Galaxy history. You can create a copy of this history by clicking <a href="https://usegalaxy.org.au/u/graceh1024/h/hybrid-de-novo-assembly">here</a> and using the import history &lsquo;+&rsquo; icon at the top right of the page. <br>
-<img src="../media/import_history.PNG" width="700"></li>
+<img alt="copy_history" src="../media/import_history.PNG" /></li>
 </ul>
 </li>
 <li><strong>Look at the history you imported</strong><ul>
@@ -1523,7 +1523,7 @@ The supplied reference genome allows a direct comparison. We can use a tool call
 <li>Execute Quast by clicking &lsquo;execute&rsquo; at the bottom of the page.</li>
 <li>We are mainly interested in one of the outputs - the HTML report</li>
 <li>Open the report. It may look something like this:<br><br>
-<img src="../media/quast_draft_assembly.PNG" width="300"></li>
+<img alt="quast_report" src="../media/quast_draft_assembly.PNG" /></li>
 <li>Note the Genome fraction (%), # mismatches per 100 kbp, # indels per 100 kbp and # contigs information.</li>
 </ul>
 <p>
@@ -1550,7 +1550,7 @@ BUSCO genes are specifically selected for each taxonomic clade, and represent a 
 <li>Leave all else default and execute the program.</li>
 </ul>
 <p>After the program has run, look at the &lsquo;short summary&rsquo; output. It may look something like this:<br><br>
-<img src="../media/busco_draft_assembly.PNG" width="400">
+<img alt="busco_output" src="../media/busco_draft_assembly.PNG" />
 <p>
 The &lsquo;full table&rsquo; is also useful. It gives a detailed list of the genes we are searching for, and information about whether they would missing, fragmented, or complete in our assembly.
 </p>
@@ -1632,7 +1632,7 @@ Long reads (Nanopore) were used to create the draft. Nanopore reads allow excell
 <p>How was the draft polished?</p>
 <details>
 <summary>Answer (click to reveal)</summary>
-Illumina reads have higher per-base accuracy than Nanopore. Illumina reads were aligned to the draft assembly, then Pilon used this alignment information to improve locations with errors in the assembly. 
+Illumina reads have higher per-base accuracy than Nanopore. Illumina reads were aligned to the draft assembly, then Pilon used this alignment information to improve locations with errors in the assembly.
 </details>
 
 <p>How does Quast inform on assembly quality?</p>
@@ -1644,7 +1644,7 @@ Quast shows summary information about the assembly contigs. If a reference genom
 <p>How does BUSCO inform on assembly quality?</p>
 <details>
 <summary>Answer (click to reveal)</summary>
-BUSCO does not use a reference genome to compare. It attempts to locate key genes which should be present in the assembly, and reports whether it could/could not find those genes. If a key gene is found, it reports whether the gene was fragmented (errors) or complete. 
+BUSCO does not use a reference genome to compare. It attempts to locate key genes which should be present in the assembly, and reports whether it could/could not find those genes. If a key gene is found, it reports whether the gene was fragmented (errors) or complete.
 </details>
 
 <h2 id="_1"><br><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -1699,7 +1699,7 @@ It is important to put perspective on the BUSCO analysis results. By running BUS
 At time of writing, these were the BUSCO results:
 </p>
 
-<p><img src="../media/busco_reference_genome.PNG", width="400"></p>
+<p><img alt="busco_result" src="../media/busco_reference_genome.PNG" /></p>
 <p>
 It seems that one BUSCO gene has two copies in the reference genome, and one other gene is fragmented.
 </p>
@@ -1714,22 +1714,22 @@ Similarly, the fragmented BUSCO may be due to the appearence of multiple SNPs ra
 
 <p><br></p>
 <h2 id="section-questions_1">Section Questions<a class="headerlink" href="#section-questions_1" title="Permanent link">&para;</a></h2>
-<p>Why did we select &lsquo;Paired&rsquo; for our Illumina reads in the Unicycler tool? </p>
+<p>Why did we select &lsquo;Paired&rsquo; for our Illumina reads in the Unicycler tool?</p>
 <details>
 <summary>Answer (click to reveal)</summary>
-Our short read set was 'paired-end'. Short read technology can only sequence a few hundred base-pairs in a single read. To provide better structural information, paired-end sequencing was created, where longer fragments (fixed length) are used. A few hundred bp is sequenced at both ends of the fragment, leaving the middle section unsequenced. The reads produced (the mate-pair) from a single fragment are separated by a fixed length, so we know they are nearby in the genome. 
+Our short read set was 'paired-end'. Short read technology can only sequence a few hundred base-pairs in a single read. To provide better structural information, paired-end sequencing was created, where longer fragments (fixed length) are used. A few hundred bp is sequenced at both ends of the fragment, leaving the middle section unsequenced. The reads produced (the mate-pair) from a single fragment are separated by a fixed length, so we know they are nearby in the genome.
 </details>
 
 <p>Does Unicycler begin by using the Long or Short reads?</p>
 <details>
 <summary>Answer (click to reveal)</summary>
-Unicycler uses short reads first. It creates an assembly graph from short reads, then uses the long reads to provide better structural information of the genome. 
+Unicycler uses short reads first. It creates an assembly graph from short reads, then uses the long reads to provide better structural information of the genome.
 </details>
 
 <p>How does Unicycler use long reads to improve its assembly graph?</p>
 <details>
 <summary>Answer (click to reveal)</summary>
-The assembly graph produced by short reads has tangled regions. When we don't know how sections of the genome are arranged, tangled regions appear in the graph.  Unicycler uses Nanopore reads which overlap these tangled regions to resolve the proper structure of the genome. 
+The assembly graph produced by short reads has tangled regions. When we don't know how sections of the genome are arranged, tangled regions appear in the graph.  Unicycler uses Nanopore reads which overlap these tangled regions to resolve the proper structure of the genome.
 </details>
 
 <p><br></p>
